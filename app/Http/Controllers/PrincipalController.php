@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Producto;
 use App\Categoria;
-
+//prueba de un push
 class PrincipalController extends Controller
 {
     public function inicio () {
