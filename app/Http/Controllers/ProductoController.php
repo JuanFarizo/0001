@@ -41,7 +41,7 @@ class ProductoController extends Controller
         $reglas = [
             'nombre' => 'required|string',
             'imagen' => 'required|file',
-            'descripcion' =>'required|string|max:100',
+            'descripcion' =>'required|string|max:200',
             'precio' => 'required|integer',
             'stock' => 'required|integer',
             'esLibro' => 'required|boolean',
@@ -114,7 +114,7 @@ class ProductoController extends Controller
             $reglas = [
             'nombre' => 'required|string',
             'imagen' => 'required|file',
-            'descripcion' =>'required|string|max:100',
+            'descripcion' =>'required|string|max:200',
             'precio' => 'required|integer',
             'stock' => 'required|integer',
             'categoria_id' => 'required|integer'

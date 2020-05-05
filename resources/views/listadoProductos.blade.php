@@ -65,9 +65,9 @@
 		</div>
 	</div>
 </div>
-    
-
-
+    <div class="container">
+		{{$productos->links()}}
+	</div>
 @endsection
 
 
