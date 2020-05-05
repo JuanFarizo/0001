@@ -38,7 +38,14 @@
             <!--<img src="img/icono-usuario.jpg" alt="..." class="rounded-circle" >-->
             Hola {{Auth::user()->name}}
           </a>
-          <a class="dropdown-item btn-danger" href="{{ route('logout') }}" value="salir">Salir</a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        <a class="dropdown-item" href="{{ route('logout') }}"
+        onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+          Salir
+     </a>
         @endif
       </div>
     </div>
