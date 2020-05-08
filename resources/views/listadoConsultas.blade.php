@@ -1,28 +1,48 @@
 @extends('layouts.dash')
 
 @section('contenido')
+<div class="container-fluid">
+<div class="row">
 @foreach ($contactos as $item)
-<div class="accordion" id="accordionExample">  
-    <div class="card">      
-        <div class="card-header" id="headingOne{{$item->id}}">
-        <h2 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne{{$item->id}}" aria-expanded="false" aria-controls="collapseOne{{$item->id}}">
-            {{$item->tema}}
-          </button>
-        </h2>
-        </div>  
-      <div id="collapseOne{{$item->id}}" class="collapse" aria-labelledby="headingOne{{$item->id}}" data-parent="#accordionExample">
-        <div class="card-body">
-            Nombre: {{$item->nombre}}
-        </div>
-        <div class="card-body">
-            Email: {{$item->email}}
-        </div>
-        <div class="card-body">
-            Mensaje: {{$item->cuerpo}}
-        </div>
-      </div> 
-    </div>
+
+    <div class="col-md-3" style="padding-top: 10px">
+      @if ($item->respondida)
+      <div class="card text-white bg-info" >
+      @else
+      <div class="card text-white bg-danger">
+      @endif
+			
+				<h3 >{{$item->tema}}</h3>
+				<div class="card-body" style="width:100%">
+					<p class="card-text">
+						{{$item->cuerpo}}
+					</p>
+				</div>
+				<div class="card-footer"  style="width:100%">
+          Nombre: {{$item->nombre}} <br>
+          Email: {{$item->email}} <br>
+          Estado: @if ($item->respondida)
+              {{"Atendida"}}
+          @else
+        {{"Pendiente"}} <form  action="contacto/{{$item->id}}" method="POST" >
+                {{csrf_field()}}
+              @method('PUT')
+              <button type="submit">Cambiar Estado</button>
+            </form>  
+          @endif
+				</div>
+			</div>
+		</div>
+	
     
-    @endforeach
+
+@endforeach
+
+
+</div>
+</div>
+    
+    <div class="container">
+      {{$contactos->links()}}
+    </div>
 @endsection

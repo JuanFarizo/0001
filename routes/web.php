@@ -38,6 +38,8 @@ Route::get('libros/{categoria}', ['as' => 'libros', 'uses' => 'PrincipalControll
 Route::get('papeleria/{categoria}', ['as' => 'papeleria', 'uses' => 'PrincipalController@productosCategoria']);
 
 Route::get('productos', 'PrincipalController@muestraProductos');
+
 Route::get('contacto', 'ContactoController@create');
 Route::post('contacto', 'ContactoController@store');
+Route::put('admin/contacto/{id}', 'ContactoController@update');
 

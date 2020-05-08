@@ -15,7 +15,7 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        $contactos = Contacto::paginate(6);        
+        $contactos = Contacto::paginate(8);        
         return view('listadoConsultas', compact('contactos'));
     }
 
@@ -98,7 +98,12 @@ class ContactoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $contactos = Contacto::all();
+        $categorias = Categoria::all();
+        $contacto = Contacto::find($id);
+        $contacto->respondida = 1;
+        $contacto->save();
+        return redirect('admin/contacto')->with(compact('contactos', 'categorias'));
     }
 
     /**

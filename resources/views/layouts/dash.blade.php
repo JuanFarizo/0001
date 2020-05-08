@@ -39,7 +39,7 @@
                     </h3>
                     <a href="/admin/contacto">Lista</a>
                     <br>
-                    <a href="">Carga</a>
+                   
 				</div>
 			</div>
 		</div>
