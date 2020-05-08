@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
-    <link type="" src="/storage/libro-grande.png"><title>Libreria Lablic</title>
+    <link type="" src=""><title>Libreria Lablic!</title>
     <link rel="icon" type="image/png" href="storage/icono-pag">
   </head>
   <body>
@@ -20,8 +20,8 @@
 <!------------INICIO HEADER--------------------------------->
 
 <header class="fixed-top">
-    <img src="/storage/libro-grande.png" alt="icono">
-    <h1><a  class= "logo" href="/plantilla">Libreria Lablic</a></h1>
+    <img src="{{asset("img/libro-grande.png")}}" alt="icono">
+    <h1><a  class= "logo" href="/inicio">Libreria Lablic</a></h1>
     <div class="btn-group" role="group">
       <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src='<?= "foto" ?>' alt="" style="height:20px; width:15px;">
@@ -95,7 +95,7 @@
             <a class="nav-link" href="">F.A.Q</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Contacto</a>
+            <a class="nav-link" href="contacto">Contacto</a>
           </li>
           @if (Auth::check() && Auth::user()->isAdmin)
           <li class="nav-item">

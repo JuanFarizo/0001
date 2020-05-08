@@ -1,6 +1,10 @@
-@extends('layouts.app')
+
+{{-- @extends('layouts.app')  --}}
+@extends('layouts.headerdash') 
+
 <title>Dashboard - {{Auth::user()->name}}</title>
-@section('content')
+
+@section('encabezado')
 
 <div class="container-fluid">
 	<div class="row">
@@ -12,7 +16,7 @@
                     </h3>
                     <a href="/admin/categoria">Listado</a>
                     <br>
-                    <a href="categoria/create">Cargar</a>
+                    <a href="/admin/categoria/create">Cargar</a>
                     <br>
 				</div>
 			</div>
@@ -23,7 +27,7 @@
                     </h3>
                     <a href="/admin/producto">Listado</a>
                     <br>
-                    <a href="producto/create">Cargar</a>
+                    <a href="/admin/producto/create">Cargar</a>
                     <br>
                     
 				</div>
@@ -31,9 +35,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h3 class="text-primary">
-                        Administradores:
+                        Consultas:
                     </h3>
-                    <a href="">Lista</a>
+                    <a href="/admin/contacto">Lista</a>
                     <br>
                     <a href="">Carga</a>
 				</div>

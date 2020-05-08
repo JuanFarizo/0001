@@ -27,11 +27,9 @@ Route::get('/admin', function () {
 
 
 Route::prefix('admin')->group(function () {
-Route::resource('categoria', 'CategoriaController')->middleware(['auth', 'isAdmin']);
-});
-
-Route::prefix('admin')->group(function () {
 Route::resource('producto', 'ProductoController')->middleware(['auth', 'isAdmin']);
+Route::resource('categoria', 'CategoriaController')->middleware(['auth', 'isAdmin']);
+Route::get('contacto', 'ContactoController@index')->middleware('auth', 'isAdmin');
 });
 
 Route::get('inicio', 'PrincipalController@inicio');
@@ -40,3 +38,6 @@ Route::get('libros/{categoria}', ['as' => 'libros', 'uses' => 'PrincipalControll
 Route::get('papeleria/{categoria}', ['as' => 'papeleria', 'uses' => 'PrincipalController@productosCategoria']);
 
 Route::get('productos', 'PrincipalController@muestraProductos');
+Route::get('contacto', 'ContactoController@create');
+Route::post('contacto', 'ContactoController@store');
+

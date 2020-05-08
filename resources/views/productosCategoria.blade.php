@@ -3,7 +3,7 @@
 
     <div class="listado-productos">
    
-    <h5 class="detalle-libros"><span class="detalle-libros1">{{$categorias[$id-1]->nombre}}</span></h5>
+    <h5 class="detalle-libros"><span class="detalle-libros1">{{$categoria->nombre}}</span></h5>
  <br>
   <div class="">
     <table class="d-none d-lg-block">
@@ -33,8 +33,8 @@
           <div class="card" style="width:250px" align="center">
         <table>
             <tr>
-                <?php $imagen = $producto->imagen ?>
-            <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$imagen")}}" alt="" width="250px" height="250px"></a>
+               
+            <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$producto->imagen")}}" alt="" width="250px" height="250px"></a>
             </tr>
         </table>
             <div class="card-body">

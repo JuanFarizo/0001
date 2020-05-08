@@ -55,11 +55,13 @@
               
           
           <div class="card">
-            <a href="/utiles"><img src="" class="card-img-top" alt="..."></a>
+            
+            <a href="{{route('libros', ['categoria' => $item->id])}}"><img src="{{asset("storage/$item->imagen")}}" class="card-img-top" alt="..."></a>
           <div class="card-body">
+            
           <h5 class="card-title"><strong>{{$item->nombre}}</strong></h5>
-          <p class="card-text">Descripcion o algo</p>
-          <div class = "button-link"><a href="" class="btn btn-primary">Ver</a></div>
+          <p class="card-text">{{$item->descripcion}}</p>
+          <div class = "button-link"><a href="{{route('libros', ['categoria' => $item->id])}}" class="btn btn-primary">Ver Productos</a></div>
           </div>
         </div>
         @endif
@@ -77,11 +79,12 @@
                 @if ($item->esLibro == 0)
                
                 <div class="card">
-                  <a href="/utiles"><img src="" class="card-img-top" alt="..."></a>
+                  
+                <a href="{{route('papeleria', ['categoria' => $item->id])}}"><img src="{{asset("storage/$item->imagen")}}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                 <h5 class="card-title"><strong>{{$item->nombre}}</strong></h5>
-                <p class="card-text">Descripcion o algo</p>
-                <div class = "button-link"><a href="" class="btn btn-primary">Ver</a></div>
+                <p class="card-text">{{$item->descripcion}}</p>
+                <div class = "button-link"><a href="{{route('papeleria', ['categoria' => $item->id])}}" class="btn btn-primary">Ver Productos</a></div>
                 </div>
               </div>
               @endif

@@ -8,7 +8,7 @@ class Producto extends Model
 {
     public $table = "productos";
     public $primaryKey = "id";
-    //public $timestamps
+    
     public $guarded = [];
 
     public function categorias() {
