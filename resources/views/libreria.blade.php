@@ -50,18 +50,20 @@
  
         <div class="card-deck">
           
-          @for ($i = 0; $i < 3; $i++)             
-          <?php $imagen = $libros[$numerosUno[$i]]->imagen ?>
-         
+          @foreach ($categorias as $item)
+          @if ($item->esLibro == 1)
+              
+          
           <div class="card">
-            <a href="/utiles"><img src="{{asset("storage/$imagen")}}" class="card-img-top" alt="..."></a>
+            <a href="/utiles"><img src="" class="card-img-top" alt="..."></a>
           <div class="card-body">
-          <h5 class="card-title"><strong>{{$libros[$numerosUno[$i]]->nombre}}</strong></h5>
-          <p class="card-text">{{$libros[$numerosUno[$i]]->descripcion}}</p>
-          <div class = "button-link"><a href="{{route('libros', ['categoria' => $libros[$numerosUno[$i]]->categoria_id])}}" class="btn btn-primary">Ver Productos</a></div>
+          <h5 class="card-title"><strong>{{$item->nombre}}</strong></h5>
+          <p class="card-text">Descripcion o algo</p>
+          <div class = "button-link"><a href="" class="btn btn-primary">Ver</a></div>
           </div>
         </div>
-          @endfor
+        @endif
+        @endforeach   
         </div>         
       </section>
 
@@ -71,18 +73,19 @@
        
               <div class="card-deck">
                 
-                @for ($i = 0; $i < 2; $i++)             
-                <?php $imagen = $papeleria[$numerosDos[$i]]->imagen ?>
+                @foreach ($categorias as $item)
+                @if ($item->esLibro == 0)
                
                 <div class="card">
-                  <a href="/utiles"><img src="{{asset("storage/$imagen")}}" class="card-img-top" alt="..."></a>
+                  <a href="/utiles"><img src="" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-                <h5 class="card-title"><strong>{{$papeleria[$numerosDos[$i]]->nombre}}</strong></h5>
-                <p class="card-text">{{$papeleria[$numerosDos[$i]]->descripcion}}</p>
-                <div class = "button-link"><a href="/{{$categorias->find($papeleria[$i]->categoria_id)->nombre}}" class="btn btn-primary">Ver productos</a></div>
+                <h5 class="card-title"><strong>{{$item->nombre}}</strong></h5>
+                <p class="card-text">Descripcion o algo</p>
+                <div class = "button-link"><a href="" class="btn btn-primary">Ver</a></div>
                 </div>
               </div>
-                @endfor
+              @endif
+              @endforeach  
               </div>         
             </section>
     </main>

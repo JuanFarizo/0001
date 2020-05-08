@@ -10,31 +10,24 @@ class PrincipalController extends Controller
 {
     public function inicio () {
         $productos = Producto::all();
-        $libros = Producto::where('esLibro', 1)->get();
-        $papeleria = Producto::where('esLibro', 0)->get();
         $categorias = Categoria::all();
-        $numerosUno = array();
-        $numerosUno = range(0, count($libros)-1);
-        shuffle($numerosUno); 
-        $numerosDos = array();
-        $numerosDos = range(0, count($papeleria)-1);
-        shuffle($numerosDos); 
-        return view('libreria', compact('productos', 'categorias', 'numerosUno', 'numerosDos', 'libros', 'papeleria'));
+        return view('libreria', compact('productos', 'categorias'));
     }
     
-    public function librosCategoria($id)
+    public function productosCategoria($id)
     {
         $categorias = Categoria::all();
         $productos = Producto::all();
-       $muestraProductos = Producto::where('categoria_id', $id)->get();
-       return view('productosCategoria', compact('muestraProductos', 'categorias', 'productos'));
-
+        $productosFiltrados = Categoria::find($id)->productos;
+        return view('productosCategoria', compact('categorias', 'productos', 'productosFiltrados', 'id'));
     }
 
     public function muestraProductos () {
         $productos = Producto::paginate(6);
         $categorias = Categoria::all();
-        return view('muestraProductos', compact('productos', 'categorias'));
+        $categoriaLibros = Categoria::where('esLibro', 1)->get();
+        $categoriaPapeleria = Categoria::where('esLibro', 0)->get();
+        return view('muestraProductos', compact('productos', 'categorias', 'categoriaLibros', 'categoriaPapeleria'));
     }
 
 }

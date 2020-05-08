@@ -9,93 +9,65 @@
       
     <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos</span></h5>
 
-  <div class="">
-      <table class="d-none d-lg-block">
+  
+    <table class="d-none d-lg-block">
+      <td><h5>Libros</h5></td>
       @foreach ($categorias as $categoria)
+      @if ($categoria->esLibro == 1)
       <tr>
         <td><a href="{{route('libros', ['categoria' => $categoria->id])}}">{{$categoria->nombre}}</a></td>
       </tr>
+      @endif
+      @endforeach
+     <td><h5>Papeleria</h5></td>
+      @foreach ($categorias as $categoria)
+      @if ($categoria->esLibro == 0)
+      <tr>
+        <td><a href="{{route('papeleria', ['categoria' => $categoria->id])}}">{{$categoria->nombre}}</a></td>
+      </tr>
+      @endif
       @endforeach
       </table>
-
-      <h3 style="text-align: center"> Libros </h3>
-        <section>
-        <div class="row justify-content-around">
-          @foreach ($productos as $producto)
-          @if ($producto->esLibro)
-          <div class="col-sm-9 col-md-6 col-lg-4">
-            <div class="card" style="width:250px" aligne="center">
-  
-              <table>
-              <tr style="padding-top:10px">
-                <?php $imagen = $producto->imagen ?>
-              <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$imagen")}}" alt="" width="250px" height="250px"></a>
-            </tr>
-          </table>
-  
+    
+         <div>
+          <h3>Libros</h3>
+          <div class="card-group" style="width:25%">            
+            @foreach ($categoriaLibros as $categoria)           
+              @foreach ($categoria->productos as $item)
+            <div class="card">
+              <?php $imagen = $item->imagen ?>
+              <img class="card-img-top" src="{{asset("storage/$imagen")}}" alt="Card image cap" class="img-thumbnail">
               <div class="card-body">
-                
-                    
-                
-                <h4 class="card-title" ><strong>{{$producto->nombre}}</strong></h4>
-                <p class="card-text">${{$producto->precio}}</p>
+              <h5 class="card-title">{{$item->nombre}}</h5>
+                <p class="card-text">{{$item->descripcion}}</p>
+                <p class="card-text"><small class="text-muted">${{$item->precio}}</small></p>
               </div>
             </div>
-            </div>
-            
-            
-                    
-          @endif
-          @endforeach
-          
-        </section>
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            {{$productos->links()}} 
-           </div>
-          </div> 
-        
+            @endforeach
+            @endforeach
+          </div>
+         </div>
 
 
-          <h3 style="text-align: center"> Libreria </h3>
-        <section>
-        <div class="row justify-content-around">
-          @foreach ($productos as $producto)
-          @if (!$producto->esLibro)
-          <div class="col-sm-9 col-md-6 col-lg-4">
-            <div class="card" style="width:250px" align="center">
-  
-              <table>
-              <tr style="padding-top:10px">
-                <?php $imagen = $producto->imagen ?>
-              <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$imagen")}}" alt="" width="250px" height="250px"></a>
-            </tr>
-          </table>
-  
+         <div>
+          <h3>Papeleria</h3>
+          <div class="card-group" style="width:25%">            
+            @foreach ($categoriaPapeleria as $categoria)           
+              @foreach ($categoria->productos as $item)
+            <div class="card">
+              <?php $imagen = $item->imagen ?>
+              <img class="card-img-top" src="{{asset("storage/$imagen")}}" alt="Card image cap">
               <div class="card-body">
-                
-                    
-                
-                <h4 class="card-title" ><strong>{{$producto->nombre}}</strong></h4>
-                <p class="card-text">${{$producto->precio}}</p>
+              <h5 class="card-title">{{$item->nombre}}</h5>
+                <p class="card-text">{{$item->descripcion}}</p>
+                <p class="card-text"><small class="text-muted">${{$item->precio}}</small></p>
               </div>
             </div>
-            </div>
-            
-            
-                    
-          @endif
-          @endforeach
-          
-        </section>
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            {{$productos->links()}} 
-           </div>
-          </div> 
-        </div>
-       
-
+            @endforeach
+            @endforeach
+          </div>
+         </div>
+      
     </div>
 
 </main>

@@ -46,11 +46,7 @@
           <input type="file" name="imagen" id="imagen">
         </div>
       <br>
-      <div>
-        <strong><label for="imagen">Seleccione el tipo  de articulo a cargar:  </label></strong>
-        <input type="radio" name="esLibro" value="1"> Libro
-        <input type="radio" name="esLibro" value="0"> Papeleria
-      </div>
+     
       <br>
       <div>
         <strong><label for="">Categoría: </label></strong>

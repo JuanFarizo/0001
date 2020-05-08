@@ -70,21 +70,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Libros</a>
             <div class="dropdown-menu">
-              <?php $listadoLibro = array();
-                    $listadoCategoria = array()?>
-              @foreach ($productos as $productos)
-              <?php               
-              if ($productos->esLibro){array_push($listadoLibro, $productos->categoria_id);}
-              else (array_push($listadoCategoria, $productos->categoria_id))  
-              ?>
-              @endforeach
-              <?php $limpioLibro = array_unique($listadoLibro);
-              $limpioCategoria = array_unique($listadoCategoria); ?>
-              @foreach ($limpioLibro as $i)
-              <a class="dropdown-item" href="{{route('libros', ['categoria' => $categorias->find($i)->id])}}">{{$categorias->find($i)->nombre}}</a>
-              @endforeach
-              
-              
+             
+              @foreach ($categorias as $item)
+              @if ($item->esLibro == 1)
+              <a class="dropdown-item" href="{{route('libros', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
+              @endif
+              @endforeach            
               <div class="dropdown-divider"></div>
             </div>
             
@@ -92,8 +83,10 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Papelería</a>
             
             <div class="dropdown-menu">
-              @foreach ($limpioCategoria as $i)
-            <a class="dropdown-item" href="">{{$categorias->find($i)->nombre}}</a>
+              @foreach ($categorias as $item)
+              @if ($item->esLibro == 0) 
+              <a class="dropdown-item" href="{{route('papeleria', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
+            @endif
               @endforeach
               <div class="dropdown-divider"></div>
             </div>

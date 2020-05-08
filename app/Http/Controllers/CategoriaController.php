@@ -39,18 +39,22 @@ class CategoriaController extends Controller
     public function store(Request $request)
     {
         $reglas = [
-            'nombre' => 'required|string'
+            'nombre' => 'required|string',
+            'esLibro' => 'required|boolean'
+
             ];
 
         $errors = [
             'required' => 'El campo :attribute es requerido',
-            'string' => 'El campo :attribute debe ser un texto'
+            'string' => 'El campo :attribute debe ser un texto',
+            'boolean' => 'Debe elegir entre libro o papeleria'
         ];
 
         $this->validate($request, $reglas, $errors);
 
                 $categoria = new Categoria();
                 $categoria->nombre = $request['nombre'];
+                $categoria->esLibro = $request['esLibro'];
                 $categoria->save();
 
                 return redirect('/admin/categoria')->with(compact('categoria'));
@@ -92,7 +96,8 @@ class CategoriaController extends Controller
         
         $categoria = Categoria::find($categorium);
         
-        $categoria->nombre = $request['nombre'];        
+        $categoria->nombre = $request['nombre'];    
+        $categoria->esLibro = $request['esLibro'];    
         $categoria->save();
     return redirect('/admin/categoria')->with(compact("categoria"));
     }

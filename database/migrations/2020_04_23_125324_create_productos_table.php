@@ -20,7 +20,6 @@ class CreateProductosTable extends Migration
             $table->text('descripcion');
             $table->integer('precio');
             $table->integer('stock');
-            $table->boolean('esLibro');
             $table->foreignId('categoria_id')->constrained();
             $table->timestamps();
         });

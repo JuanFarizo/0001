@@ -11,7 +11,7 @@
             <div class="col-md-12">
                 <h3> {{$item->nombre}}</h3>
                 @if (isset($mensaje))
-                        <p>{{$mensaje}}</p>
+                <p>{{$mensaje}}</p>
                 @endif 
                 <div class="row">
                     <button style="background-color:#42a5f5" class="btn btn-primary1"><a href="categoria/{{$item->id}}/edit">Editar</a></button>

@@ -2,6 +2,6 @@
 
 @section('contenido')
     
-<h1>Bienvenido al administrador de la web!</h1>
+<h1>Bienvenido {{Auth::user()->name}} al administrador de la web! </h1>
 
 @endsection

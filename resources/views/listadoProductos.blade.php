@@ -1,11 +1,7 @@
 @extends('layouts.dash')
 
 @section('contenido')
-<h1>Listado de Productos:</h1>   
-
-  
-
-
+<h1>Listado de Productos:</h1>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -27,6 +23,9 @@
 						<th>
 							Categoria
 						</th>
+						<th>
+							Tipo
+						</th>
 					</tr>
 				</thead>
 				@foreach ($productos as $producto)
@@ -47,10 +46,17 @@
 						<td>
 							 @foreach ($categorias as $categoria)
 								@if ($producto->categoria_id == $categoria->id)
-									{{$categoria->nombre}}
-								@endif
-							@endforeach
+									{{$categoria->nombre}}				
 						</td>
+						<td>
+							@if ($categoria->esLibro == 1)
+								Libro
+							@else
+								Papeleria
+							@endif
+						</td>
+						@endif
+						@endforeach
 						<td><button style="background-color:#42a5f5" class="btn btn-primary1"><a href="producto/{{$producto->id}}/edit">Editar</a></button></td>
 						<td><form action="producto/{{$producto->id}}/" method="post">
 							{{csrf_field()}}

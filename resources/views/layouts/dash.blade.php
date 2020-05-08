@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title>Dashboard - {{Auth::user()->name}}</title>
 @section('content')
 
 <div class="container-fluid">

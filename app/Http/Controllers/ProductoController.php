@@ -44,7 +44,6 @@ class ProductoController extends Controller
             'descripcion' =>'required|string|max:200',
             'precio' => 'required|integer',
             'stock' => 'required|integer',
-            'esLibro' => 'required|boolean',
             'categoria_id' => 'required|integer'
             ];
 
@@ -52,8 +51,7 @@ class ProductoController extends Controller
             'required' => 'El campo :attribute es requerido',
             'string' => 'El campo :attribute debe ser un texto',
             'max' => 'El campo :attribute tiene mas :max letras',
-            'integer' => 'El campo :attribute debe ser un numero entero',
-            'boolean' => 'Debe elegir entre libro o papeleria'
+            'integer' => 'El campo :attribute debe ser un numero entero'            
         ];
 
         $this->validate($request, $reglas, $errors);
@@ -69,7 +67,6 @@ class ProductoController extends Controller
                 $producto->descripcion = $request['descripcion'];
                 $producto->precio = $request['precio'];
                 $producto->stock = $request['stock'];
-                $producto->esLibro = $request['esLibro'];
                 $producto->categoria_id = $request['categoria_id'];
 
                 $producto->save();

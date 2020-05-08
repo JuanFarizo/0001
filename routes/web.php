@@ -36,7 +36,7 @@ Route::resource('producto', 'ProductoController')->middleware(['auth', 'isAdmin'
 
 Route::get('inicio', 'PrincipalController@inicio');
 
-Route::get('libros/{categoria}', ['as' => 'libros', 'uses' => 'PrincipalController@librosCategoria']);
-Route::get('libros/{categoria}', ['as' => 'libros', 'uses' => 'PrincipalController@papeleriaCategoria']);
+Route::get('libros/{categoria}', ['as' => 'libros', 'uses' => 'PrincipalController@productosCategoria']);
+Route::get('papeleria/{categoria}', ['as' => 'papeleria', 'uses' => 'PrincipalController@productosCategoria']);
 
 Route::get('productos', 'PrincipalController@muestraProductos');
