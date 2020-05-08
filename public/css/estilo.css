@@ -95,6 +95,17 @@
   .image {
     border-radius: 9px;
   }
+  .avatar{
+  height: 24px;
+  width: 26px;
+  border-radius: 14px;
+  margin-top: 11px;
+  margin-right: 4px;
+  position: relative;
+  top: -9px;
+  }
+  
+
   .card-img-top {
     width: 150px;
     border: 1px solid #ddd;
@@ -282,8 +293,9 @@
     resize: both;
   }
   .form-control {
-    width: 20%;
+    width: auto;
   }
+
   /*RECUPERAR-CONTRASEÑA*/
   
   .container-form {

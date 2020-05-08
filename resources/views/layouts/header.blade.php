@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
-    <link type="" src=""><title>Libreria Lablic!</title>
-    <link rel="icon" type="image/png" href="storage/icono-pag">
+    <link type="" src=""><title>Libreria Lablic</title>
   </head>
   <body>
 
@@ -24,18 +23,19 @@
     <h1><a  class= "logo" href="/inicio">Libreria Lablic</a></h1>
     <div class="btn-group" role="group">
       <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src='<?= "foto" ?>' alt="" style="height:20px; width:15px;">
+
+        <img src="/storage/avatars/{{ auth()->user()->avatar}}" alt="" style="height:24px; width:26px; border-radius: 14px; margin-top: 11px;">
       </button>
+      <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
       <div class="vent-user dropdown-menu " style="position: absolute;will-change: transform;top: 0px;left: 0px;transform: translate3d(-200px, 38px, 0px);text-align-last: center;" aria-labelledby="btnGroupDrop1">
-        <?php if (!Auth::check()) : ?>
+        @if (!Auth::check())
           <a class="dropdown-item" href="/login">Ingresar</a>
           <a class="dropdown-item" href="/register">Registrar</a>
-        <?php endif; ?>
+        @endif
 
         @if (Auth::check())
           <a class="dropdown-item" href="perfil-usuario.php">
-            <span class="rounded-circle border border-primary" style="background-image: url('imagenPerfil/5df98608d726c.png'); background-size: cover;  width:42px; height: 42px;"></span>
-            <!--<img src="img/icono-usuario.jpg" alt="..." class="rounded-circle" >-->
+            <img class="avatar" src="/storage/avatars/{{ auth()->user()->avatar}}" alt="">
             Hola {{Auth::user()->name}}
           </a>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
+    
     
 <!-----------BARRA DE NAVEGACIÓN--------------------------------->
 
