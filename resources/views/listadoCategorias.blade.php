@@ -18,6 +18,9 @@
 						<th>
 							Descripcion
 						</th>
+						<th>
+							Tipo
+						</th>
 					
 					</tr>
 				</thead>
@@ -32,7 +35,14 @@
 						</td>
 						<td>
 							{{$categoria->descripcion}}
-						</td>        
+						</td>   
+						<td>
+							@if ($categoria->esLibro)
+							Libro	
+							@else
+							Papeleria
+							@endif		
+						</td>      
 						<td><button style="background-color:#42a5f5" class="btn btn-primary1"><a href="categoria/{{$categoria->id}}/edit">Editar</a></button></td>
 						<td><form action="categoria/{{$categoria->id}}/" method="post">
 							{{csrf_field()}}
