@@ -28,7 +28,14 @@ class PrincipalController extends Controller
         $categorias = Categoria::all();
         $categoriaLibros = Categoria::where('esLibro', 1)->get();
         $categoriaPapeleria = Categoria::where('esLibro', 0)->get();
-        return view('muestraProductos', compact('productos', 'categorias', 'categoriaLibros', 'categoriaPapeleria'));
+        return view('muestraProductos', compact('productos','categorias', 'categoriaLibros', 'categoriaPapeleria'));
+    }
+
+     //Muestra  detalle de producto
+     public function show($id) {
+        $item = Producto::find($id);
+        $categorias =  Categoria::all();
+         return view('detalleProducto', compact('item', 'categorias'));
     }
 
 }

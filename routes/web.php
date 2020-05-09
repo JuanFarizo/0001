@@ -34,6 +34,7 @@ Route::get('contacto', 'ContactoController@index')->middleware('auth', 'isAdmin'
 
 Route::get('inicio', 'PrincipalController@inicio');
 
+//Muestra productos por categoria
 Route::get('libros/{categoria}', ['as' => 'libros', 'uses' => 'PrincipalController@productosCategoria']);
 Route::get('papeleria/{categoria}', ['as' => 'papeleria', 'uses' => 'PrincipalController@productosCategoria']);
 
@@ -42,4 +43,6 @@ Route::get('productos', 'PrincipalController@muestraProductos');
 Route::get('contacto', 'ContactoController@create');
 Route::post('contacto', 'ContactoController@store');
 Route::put('admin/contacto/{id}', 'ContactoController@update');
+
+Route::get('/producto/{id}',  'PrincipalController@show');
 
