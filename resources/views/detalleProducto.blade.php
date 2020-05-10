@@ -8,7 +8,6 @@
 <br>
 <br>
 <main>
-       
     <div class="container">
     <h2> {{$item->nombre}}</h2>
     <div class="container">

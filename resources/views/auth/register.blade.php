@@ -102,5 +102,5 @@
         </div>
     </div>
 </div>
-<script src="/js/app.js"></script>
+<script src="{{ asset('js/app1.js') }}" defer></script>
 @endsection

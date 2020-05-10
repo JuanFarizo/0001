@@ -107,7 +107,8 @@
   
 
   .card-img-top {
-    width: 150px;
+    width: 370px;
+    height: 220px;
     border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
@@ -127,16 +128,16 @@
   /*color boton busqueda y de boton ver productos*/
   .btn-primary{
     color: #fff;
-    background-color: #db7789;
-    border-color: #c67a85;
+    border-color: #f9791c;
     text-shadow: 3px 1px 2.5px #000;
+    background-color: #ff7f50;
   }
   
   .btn-primary:hover{
     background-color: white;
-    color: #c67a85;
+    color: #ff7f50;
     font-weight: bolder;
-    border: 3px solid #c67a85;
+    border: 3px solid #ff7f50;
     text-shadow: none;
   }
   
@@ -249,7 +250,7 @@
   table{
   float: left;
   width: 18%;
-  background-color: rgb(226, 146, 137);
+  background-color: #ff7f50;
   padding: 28px;
   margin: 8px;
   color: #fff;

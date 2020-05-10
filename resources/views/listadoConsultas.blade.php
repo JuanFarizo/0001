@@ -12,7 +12,7 @@
       <div class="card text-white bg-danger">
       @endif
 			
-				<h3 >{{$item->tema}}</h3>
+				<h3 style="margin-top:10px; text-align:center">{{$item->tema}}</h3>
 				<div class="card-body" style="width:100%">
 					<p class="card-text">
 						{{$item->cuerpo}}

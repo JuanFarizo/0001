@@ -13,7 +13,8 @@
    
     
          <div>
-          <h3>Libros</h3>
+          <h3 style="text-align:center">Libros</h3>
+          <div class="row justify-content-around">
           <div class="card-group" style="width:25%">            
             @foreach ($categoriaLibros as $categoria)           
               @foreach ($categoria->productos as $item)
@@ -25,22 +26,23 @@
               <div class="card-body">
               <h5 class="card-title">{{$item->nombre}}</h5>
                 <p class="card-text"><small class="text-muted">${{$item->precio}}</small></p>
-              </a>
               </div>
-            
+            </a>
             </div>
             @endforeach
             @endforeach
           </div>
+        </div>
          </div>
 
 
          <div>
-          <h3>Papeleria</h3>
+          <h3 style="text-align:center">Papeleria</h3>
+          <div class="row justify-content-around">
           <div class="card-group" style="width:25%">            
             @foreach ($categoriaPapeleria as $categoria)           
               @foreach ($categoria->productos as $item)
-              <a href="">
+              <a href="/producto/{{$item->id}}">
             <div class="card">
               <?php $imagen = $item->imagen ?>
               <img class="card-img-top" src="{{asset("storage/$imagen")}}" alt="Card image cap">
@@ -53,6 +55,7 @@
             @endforeach
             @endforeach
           </div>
+         </div>
          </div>
       
     </div>

@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    <h2>¡Bienvenido!</h2>
+                    <a href="/inicio" style:><input type="submit" value="Ir al sitio"></a>
                 </div>
             </div>
         </div>
