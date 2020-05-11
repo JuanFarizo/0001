@@ -23,8 +23,10 @@
     <h1><a  class= "logo" href="/inicio">Libreria Lablic</a></h1>
     <div class="btn-group" role="group">
       <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
+        @if (Auth::check())
         <img src="/storage/avatars/{{ auth()->user()->avatar}}" alt="" style="height:24px; width:26px; border-radius: 14px; margin-top: 11px;">
+        @endif
+       
       </button>
       <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
       <div class="vent-user dropdown-menu " style="position: absolute;will-change: transform;top: 0px;left: 0px;transform: translate3d(-200px, 38px, 0px);text-align-last: center;" aria-labelledby="btnGroupDrop1">
