@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     <h2>¡Bienvenido!</h2>
-                    <a href="/inicio" "><input style="background-color:#ff7f8c" type="submit" value="Ir al sitio"></a>
+                    <a href="/inicio"><input style="background-color:#ff7f8c" type="submit" value="Ir al sitio"></a>
                 </div>
             </div>
         </div>
