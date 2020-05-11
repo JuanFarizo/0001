@@ -1,5 +1,4 @@
-<!-- <div class="container"> -->
-      @extends("layouts.header")
+@extends("layouts.header")
 
     <main style="margin-top:200px" >
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">

@@ -30,16 +30,16 @@
         <div class="row justify-content-around">
           @foreach ($productosFiltrados as $producto)
           <div class="col-sm-9 col-md-6 col-lg-4">
-          <div class="card" style="width:250px align=center">
+          <div class="card" style="padding-top:20px; margin-top:20px; margin-bottom:20px; width: 315px">
         <table>
             <tr>
                
-            <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$producto->imagen")}}" alt="" width="250px" height="250px"></a>
+            <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$producto->imagen")}}" alt=""></a>
             </tr>
         </table>
             <div class="card-body">
               <h4 class="card-title" ><strong>{{$producto->nombre}}</strong></h4>
-              <p class="card-text">${{$producto->precio}}</p>
+              <p class="card-text"><small class="text-muted">${{$producto->precio}}</small></p>
             </div>
           </div>
           </div>
