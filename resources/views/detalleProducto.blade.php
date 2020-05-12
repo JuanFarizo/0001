@@ -32,7 +32,7 @@
        </div>
        <br>
        <div>
-       <input type="submit" value="Agregar al carrito">
+       <input type="submit" value="Comprar">
      </div>
        <br>
        <br>
