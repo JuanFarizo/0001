@@ -470,14 +470,16 @@
   }
   
   .detalle-libros{
-    background-color:black;
+    background-color:#ff7f9f;
     padding: 10px;
     text-transform: uppercase;
+  
   }
   .detalle-libros1{
-    color:pink;
+    color:white;
     text-align: center;
     padding: 20px;
+    
     }
   
   .detalle-libro{

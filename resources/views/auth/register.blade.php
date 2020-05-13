@@ -102,5 +102,5 @@
         </div>
     </div>
 </div>
-
+<script src="{{asset("js/validacion.js")}}"></script>
 @endsection
