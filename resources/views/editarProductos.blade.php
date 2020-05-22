@@ -57,9 +57,6 @@
               @endforeach
             </select>
       </div>
-
-
-
     <button type="submit">Guardar</button>
   <a href="/admin/producto" class="btn btn-default">Cancelar</a>
 </form>

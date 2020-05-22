@@ -6,33 +6,33 @@
 <br>
 <br>
 <br>
-<br>
+
 <main>
     <div class="container">
-    <h2> {{$item->nombre}}</h2>
+    <h2> {{$producto->nombre}}</h2>
     <div class="container">
     <ul>
 <div style= "float:right">
         <li>
     <strong>{{"Nombre"}}:</strong>
-     {{$item->nombre}}
+     {{$producto->nombre}}
      <br>
      <strong>{{"Descripcion"}}:</strong>
-    {{$item->descripcion}}
+    {{$producto->descripcion}}
     <br>
     <strong>{{"Categoria"}}:</strong>
-    {{$item->categorias->nombre}}
+    {{$producto->categorias->nombre}}
     <br>
     <strong>{{"Precio"}}:</strong>
-        ${{$item->precio}}
+        ${{$producto->precio}}
 </div>
     <br>
     <div>
-        <img src="/storage/{{$item->imagen}}" height= "200px">
+        <img src="/storage/{{$producto->imagen}}" height= "200px">
        </div>
        <br>
        <div>
-       <input type="submit" value="Comprar">
+       <a href="/carrito/{{$producto->id}}" class="btn btn-primary" type="button">Comprar</a>
      </div>
        <br>
        <br>
@@ -42,6 +42,5 @@
     </div>
 </div>
 </main>
-
 
 @extends("layouts.footer")

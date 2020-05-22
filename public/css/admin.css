@@ -1,0 +1,103 @@
+body{
+    background-color: whitesmoke;
+    font-family:'Muli',sans-serif;
+    font-size: 14px;
+}
+
+h2,h3,h4,h5,ul,body,html{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*DASHBOARD*/
+.wrapper{
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .col1{
+    float:left;
+    position:relative;
+    z-index:999;
+    width:17%;
+  }
+  
+  .col2{
+    background-color:#ff89c0;
+    float:left;
+    width: 83%;
+  }
+
+  .col2 a{
+    color: #fff;
+  }
+  
+  .sidebar{
+    background-color: #fff;
+    min-height: 100vh;
+  }
+
+
+
+  /*SIDEBAR DASH*/
+  .section-top{
+    background-color:#ff89c0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+
+  .user{
+    color: white;
+    padding: 16px;
+  }
+
+  
+  .main ul li {
+   margin-bottom: 4px;
+  }
+  
+   ul{
+    list-style: none;
+   }
+
+   ul a{
+   color:rgb(32, 31, 31);
+   }
+   
+   a{
+       text-decoration: none;
+       color:rgb(32, 31, 31);
+   }
+
+   a:hover{
+       text-decoration: none;
+       color:rgb(32, 31, 31);
+   }
+
+ .enlace{
+   color:rgb(53, 53, 53);
+   display:block;
+   font-size:1.1em;
+   padding: 10px 0px 16px 0px;
+   text-align:center;
+ }
+
+
+
+ li .enlace:hover{
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 1.1em;
+    background-color: #f590a1;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .page{
+      padding-top: 16px;
+      padding-bottom:16px;
+  }
+
+  .breadcrumb{
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }

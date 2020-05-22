@@ -23,14 +23,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Dashboard
 Route::get('/admin', function () {
-    return view('dashBoard');
+    return view('layouts.master');
 })->middleware(['auth', 'isAdmin']);
 
-//Listado de categorias, productos y consultas(contacto) en el dashboard(ADMINISTRADOR)
+//Listado de usuarios, categorias, productos y consultas(contacto) en el dashboard(ADMINISTRADOR)
 Route::prefix('admin')->group(function () {
 Route::resource('producto', 'ProductoController')->middleware(['auth', 'isAdmin']);
 Route::resource('categoria', 'CategoriaController')->middleware(['auth', 'isAdmin']);
 Route::get('contacto', 'ContactoController@index')->middleware('auth', 'isAdmin');
+Route::get('usuarios', 'UserController@index')->middleware('auth', 'isAdmin');
 });
 
 //Página principal
@@ -51,6 +52,17 @@ Route::put('admin/contacto/{id}', 'ContactoController@update');
 //Detalle producto
 Route::get('/producto/{id}',  'PrincipalController@show');
 
+//Carrito de compras
 
+Route::get('carrito', 'carritoController@carrito');
+Route::get('carrito/{id}', 'carritoController@add');
+Route::get('carrito/delete/{id}',['as' => 'carrito-delete', 'uses' => 'carritoController@delete']);
+//Route::get('/carrito/{id}/{cantidad}','carritoController@update');
 
+//Perfil usuario
+Route::get('/perfil-usuario/{id}', 'UserController@show');
 
+//Editar perfil de usuario
+Route::get('/perfil-usuario/{id}/edit', 'UserController@edit');
+
+Route::put('/perfil-usuario/{id}', 'UserController@update');

@@ -11,52 +11,43 @@
     <script src="https://kit.fontawesome.com/6ac70a7b0a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
-    <link type="" src="/storage/libro-grande.png"><title>Libreria Lablic</title>
-    <link rel="icon" type="image/png" href="storage/icono-pag">
+    <link rel="stylesheet" href="{{ asset("css/admin.css")}}">
+    <link rel="shortcut icon" href="{{asset("img/librito-icono.ico")}}"/>
+    <title>@yield('title') - Libreria Lablic</title>
   </head>
   <body>
-    <div>
-  
-
-<!------------INICIO HEADER--------------------------------->
-
-<header class="fixed-top">
-    <img src="{{asset("img/libro-grande.png")}}" alt="icono">
-    <h1><a  class= "logo" href="/admin">Dashboard</a></h1>
-  
     
-<!-----------BARRA DE NAVEGACIÓN--------------------------------->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="/inicio">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/productos">Nuestros productos</a>
-          </li>
-       
-
-        </ul>
-
-<!------------BUSCADOR DE LA NAVEGACION--------------------------------->
-        
-      </div>
-    </nav>
-  </header>
-  <div style="padding-top: 150px">
-  <main class="py-4" >
-    @yield('encabezado')
-</main>
+    <div class="wrapper">
+     <div class="col1">@include('layouts.sidebar')</div>
+      <div class="col2">
+       <nav class="navbar navbar-expand-lg shadow">
+         <div class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+            <li class="nav-item">
+            <a href="/inicio" class="navbar-brand"><i class="fas fa-home" aria-hidden="true"></i> Home</a> 
+              <a href="{{url('/admin')}}"><i class="fas fa-table" class="nav-link"></i>  Dashboard</a>
+          </ul>
+     </div>
+</nav>
 </div>
-</div>
-</body>
-    </html>
+
+   <div class="page">
   
-
-
+    <div class="container-fluid">
+      <nav aria-label="breadcrumb shadow">
+         <ol class="breadcrumb">
+           <li class="breadcrumb-item">
+             <a href="{{url('/admin')}}"><i class="fas fa-table"></i>  Dashboard</a>
+        </li>
+        @section('breadcrumb')
+       @show
+       </ol>
+      </nav>
+     </div>
+    </div>
+     @section('content')
+   @show
+   </div>
+  
+  </body>
+</html>

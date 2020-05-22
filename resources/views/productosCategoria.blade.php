@@ -1,33 +1,23 @@
 @extends("layouts.header")
+
 <main class="main-products" style="margin-top:200px">
 
     <div class="listado-productos">
    
     <h5 class="detalle-libros"><span class="detalle-libros1">{{$categoria->nombre}}</span></h5>
  <br>
-  <div class="">
-    <table class="d-none d-lg-block">
-      <td><h5 style="color: black">Libros</h5></td>
-      @foreach ($categorias as $categoria)
-      @if ($categoria->esLibro == 1)
-      <tr>
-        <td><a href="{{route('libros', ['categoria' => $categoria->id])}}" class="enlace-1">{{$categoria->nombre}}</a></td>
-      </tr>
-      @endif
-      @endforeach
-     <td><h5 style="color: black">Papeleria</h5></td>
-      @foreach ($categorias as $categoria)
-      @if ($categoria->esLibro == 0)
-      <tr>
-        <td><a href="{{route('papeleria', ['categoria' => $categoria->id])}}" class="enlace-1">{{$categoria->nombre}}</a></td>
-      </tr>
-      @endif
-      @endforeach
-     
-      </table>
+  <div class="d-none d-lg-block">
+ <ul class="list-group list-group-flush" style="width: 15%">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+</div>
 
       <section>
-        <div class="row justify-content-around">
+        <div class="row justify-content-center">
           @foreach ($productosFiltrados as $producto)
           <div class="col-sm-9 col-md-6 col-lg-4">
           <div class="card" style="padding-top:20px; margin-top:20px; margin-bottom:20px; width: 315px">
@@ -48,11 +38,7 @@
         
         </div>
        
-
-    </div>
-
-      </div>
-
+        
     </main>
 
     @extends("layouts.footer")

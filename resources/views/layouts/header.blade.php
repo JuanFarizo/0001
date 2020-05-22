@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Muli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet"> 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -12,7 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
-    <link type="" src=""><title>Libreria Lablic</title>
+    <link rel="shortcut icon" href="{{asset("img/librito-icono.ico")}}"/>
+    <title>Libreria Lablic</title>
+
   </head>
   <body>
 
@@ -26,9 +29,9 @@
         @if (Auth::check())
         <img src="/storage/avatars/{{ auth()->user()->avatar}}" alt="" style="height:24px; width:26px; border-radius: 14px; margin-top: 11px;">
         @endif
-       
+
       </button>
-      <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
+      <button onclick="location.href='/carrito'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
       <div class="vent-user dropdown-menu " style="position: absolute;will-change: transform;top: 0px;left: 0px;transform: translate3d(-200px, 38px, 0px);text-align-last: center;" aria-labelledby="btnGroupDrop1">
         @if (!Auth::check())
           <a class="dropdown-item" href="/login">Ingresar</a>
@@ -36,7 +39,7 @@
         @endif
 
         @if (Auth::check())
-          <a class="dropdown-item" href="perfil-usuario.php">
+          <a class="dropdown-item" href="/perfil-usuario/id">
             <img class="avatar" src="/storage/avatars/{{ auth()->user()->avatar}}" alt="">
             Hola {{Auth::user()->name}}
           </a>
@@ -55,7 +58,7 @@
 <!-----------BARRA DE NAVEGACIÓN--------------------------------->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="/inicio">Home</a>
+      <a class="navbar-brand" href="/inicio"><i class="fas fa-home"></i> Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -64,14 +67,14 @@
 
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/productos">Nuestros productos</a>
+            <a class="nav-link" href="/productos"><i class="fas fa-boxes"></i> Nuestros productos</a>
           </li>
-        
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Libros</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book-open"></i> Libros</a>
             <div class="dropdown-menu">
-             
-              @foreach ($categorias as $item)
+
+              @foreach ($errors as $item)
               @if ($item->esLibro == 1)
               <a class="dropdown-item" href="{{route('libros', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
               @endif
@@ -80,11 +83,11 @@
             </div>
             
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Papelería</a>
-            
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-pencil-alt"></i> Papelería</a>
+
             <div class="dropdown-menu">
-              @foreach ($categorias as $item)
-              @if ($item->esLibro == 0) 
+              @foreach ($errors as $item)
+              @if ($item->esLibro == 0)
               <a class="dropdown-item" href="{{route('papeleria', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
             @endif
               @endforeach
@@ -92,29 +95,27 @@
             </div>
 
           <li class="nav-item">
-            <a class="nav-link" href="">F.A.Q</a>
+            <a class="nav-link" href=""><i class="fas fa-question-circle"></i> F.A.Q</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto">Contacto</a>
+            <a class="nav-link" href="contacto"><i class="fas fa-laptop"></i> Contacto</a>
           </li>
           @if (Auth::check() && Auth::user()->isAdmin)
           <li class="nav-item">
-            <a class="nav-link" href="/admin">Dashboard</a>
-          </li> 
+            <a class="nav-link" href="/admin"><i class="fas fa-user-shield"></i> Dashboard</a>
+          </li>
           @endif
-          
+
          @if (Auth::check())
          <li class="nav-item">
-          <a class="nav-link" href="">{{Auth::user()->name}}</a>
-          </li>  
+          <a class="nav-link" href="/perfil-usuario/id">{{Auth::user()->name}}</a>
+          </li>
          @else
          <li class="nav-item">
           <a class="nav-link" href="{{ route('login') }}">Login</a>
-          </li> 
+          </li>
          @endif
-          
-       
-          
+
           <li class="nav-item">
             <a class="nav-link" href="<?php if(isset($_SESSION['usuario'])) {echo "perfil-usuario.php";} else {echo "";}?>"><?php if(isset($_SESSION['usuario'])) {echo "Perfil Usuario";}?></a>
           </li>

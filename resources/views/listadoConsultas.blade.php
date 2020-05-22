@@ -1,11 +1,13 @@
-@extends('layouts.dash')
+@extends('layouts.master')
 
-@section('contenido')
-<div class="container-fluid">
+@section('title', 'Consultas')
+
+@section('content')
+<div class= "container-fluid">
 <div class="row">
 @foreach ($contactos as $item)
 
-    <div class="col-md-3" style="padding-top: 10px">
+    <div class="col-md-4" style="padding-top: 10px; padding-left:40px">
       @if ($item->respondida)
       <div class="card text-white bg-info" >
       @else
@@ -33,16 +35,14 @@
 				</div>
 			</div>
 		</div>
-	
-    
 
 @endforeach
 
-
+</div>
 </div>
 </div>
     
-    <div class="container">
+    <div class="container-fluid">
       {{$contactos->links()}}
     </div>
 @endsection

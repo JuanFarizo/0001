@@ -1,6 +1,12 @@
 @extends('layouts.dash')
-
-@section('contenido')
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<section>
 <ul style="color:red" class="errores">
     @foreach ($errors->all() as $error)
         <li>{{$error}}</li>
@@ -36,4 +42,3 @@
 </div>
 </div>
 </section>
-@endsection

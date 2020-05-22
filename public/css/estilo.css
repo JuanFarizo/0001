@@ -84,14 +84,12 @@
   
   /*IMG*/
   .card-img-top:hover{
-    -webkit-transform: scale(1.09, 1.09);
+    transform: scale(1.09, 1.09);
     -webkit-transition-timin-function: ease-out;
-    -webkit-transition-duration: 500ms;
-    -moz-transform: scale(1.09, 1.09);
-    -moz-transition-timin-function: ease-out;
-    -moz-transition-duration: 500ms;
+    transition-duration: 900ms;
   }
   
+
   .image {
     border-radius: 9px;
   }
@@ -107,11 +105,11 @@
   
 
   .card-img-top {
-    width: 370px;
+    width: 420px;
     height: 220px;
     border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   .image{
@@ -130,14 +128,6 @@
     text-decoration: none;
   }
 
-
-  /*ventana usuario*/
-  .vent-user{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-  }
-  
   /*boton crud productos*/
   .btn-primary1{
    margin-right: 50px;
@@ -146,16 +136,22 @@
   /*color boton busqueda y de boton ver productos*/
   .btn-primary{
     color: #fff;
-    border-color: #f9791c;
+    border-color: #f175af;
     text-shadow: 3px 1px 2.5px #000;
-    background-color: #fb8229f0;
+    background-color:#f783ac;
   }
-  
+
+  .btn-eye:hover{
+  background-color: white;
+	 color:#42a5f5;
+  }
+
+
   .btn-primary:hover{
     background-color: white;
-    color: #ff7f50;
+    color: #f175af;
     font-weight: bolder;
-    border: 3px solid #ff7f50;
+    border: 3px solid #f175af;
     text-shadow: none;
   }
   
@@ -179,8 +175,7 @@
   .card-text{
     text-align: center;
   }
-  
-  
+ 
   /*boton de compra*/
   .btn-compra{
     float: right;
@@ -265,17 +260,20 @@
     text-align: left;
   }
   
-  table{
-  float: left;
-  width: 18%;
-  background-color: #fb8229f0;
-  padding: 28px;
-  margin: 8px;
-  color: #fff;
-  border-radius: 10px;
+  /*DASHBOARD*/
+
+  #categorias{
+   overflow: hidden;
   }
+
   
   /*estilo de formularios*/
+.inside{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+  
+
   .contenedor-form{
     margin: 15px;
     max-width: 500px;
@@ -376,25 +374,59 @@
   
   
   /*PERFIL-USUARIO*/
-  .flex-column {
-    background-color: white;
-    font-family: "Muli",sans-serif;
+.container-login{
+margin-top: 130px;
+width:100%;
+min-height:100vh;
+display: -webkit-flex;
+display: flex;
+flex-wrap:wrap;
+justify-content: center;
+align-items: center;
+background: -webkit-linear-gradient(to right, #fde3a3, #fb9abc);
+background: linear-gradient(to right, #fde3a3, #fb9abc);
+}
+
+ .panel{
+   width:70px;
+   background-color: white;
+ }
+
+#avatar-usuario{
+    display:block;
+    height:100px;
+    width:100px;
+    border-radius:50px;
+    margin: 15 auto;
   }
-  .list-group-item a {
-    color:black;
-  }
-  .card-header{
-    background-color: pink;
-  }
-  .card-title-username{
-    border-bottom:1px solid darkgrey;
-  }
-  .card-body-info{
-    border: 1px solid darkgrey;
-    padding:30px;
-    background-color: white;
+
+  .form-group{
+    padding-left: 16px;
   }
   
+
+
+  h2.title{
+    color: #2c3246;
+    font-size: 1.1em;
+    text-shadow: none;
+    padding: 12px 16px;
+    margin-bottom: auto;
+  }
+
+
+
+.btn-perfil{
+  margin-bottom: 15px;
+  position: relative;
+  right: -250px;
+}
+
+span{
+    
+    width:100%;
+  }
+
   /*SECCION FAQ*/
   .pregunta{
     text-align: left;
@@ -423,7 +455,6 @@
   /*FOOTER*/
   footer{
     border-top: 2px solid pink;
-    margin-top: 10px;
     background-color: rgba(255, 99, 71, 0.5);
     flex: 0 0 auto;
   }
@@ -463,34 +494,17 @@
       text-decoration: none;
       text-align: center;
   }
-  /*LISTADO-LIBROS*/
+
   
-  .detalle-productos{
-    background-color: white;
-  }
-  
-  .detalle-libros{
-    background-color:#ff7f9f;
-    padding: 10px;
-    text-transform: uppercase;
-  
-  }
-  .detalle-libros1{
-    color:white;
-    text-align: center;
-    padding: 20px;
-    
-    }
-  
+.titulo{
+  font-family: 'Cinzel Decorative', cursive;
+}
   .detalle-libro{
   text-align: left;
   color:black;
   text-transform: uppercase;
   }
-  .detalle-libro1{
-    background-color: pink;
-    padding: 10px;
-  }
+ 
   
   
   .container-cards{
@@ -523,16 +537,7 @@
     border-radius: 6px 6px 0px 0px;
   }
   
-  .titulo-mochila{
-    text-transform: uppercase;
-  }
-  .titulo-cuadernos{
-    text-transform: uppercase;
-  }
   
-  .titulo-lapices {
-    text-transform: uppercase;
-  }
   
   /*DETALLE-PRODUCTO*/
   .container-detalle{
@@ -548,9 +553,14 @@
   ul li{
     list-style: none;
   }
-  .boton-comprar{
-    background-color: pink;
-    border-color: gold;
+  
+
+  /*CARRITO*/
+
+  .cantidad {
+    width: 50px;
   }
+  
+
 
  

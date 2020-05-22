@@ -1,6 +1,12 @@
 @extends('layouts.dash')
 
-@section('contenido')
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <ul style="color:red" class="errores">
   @foreach ($errors->all() as $error)
       <li>{{$error}}</li>
@@ -38,5 +44,4 @@
   <a href="/admin/categoria" class="btn btn-default">Cancelar</a>
 </form>
 </div>
-@endsection
 
