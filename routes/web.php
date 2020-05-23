@@ -54,7 +54,7 @@ Route::get('/producto/{id}',  'PrincipalController@show');
 
 //Carrito de compras
 
-Route::get('carrito', 'carritoController@carrito');
+Route::get('carrito', 'carritoController@carrito')->middleware('auth');
 Route::get('carrito/{id}', 'carritoController@add');
 Route::get('carrito/delete/{id}',['as' => 'carrito-delete', 'uses' => 'carritoController@delete']);
 //Route::get('/carrito/{id}/{cantidad}','carritoController@update');
