@@ -60,28 +60,8 @@ class CarritoController extends Controller{
         session()->put('carrito', $carrito);
         return view('carrito', compact('carrito', 'producto'));
     }
-    
-    //Actualizar el carrito
-    public function update($id){
-        $producto = Producto::find($id);
-        $carrito = session()->get('carrito');
-        if(isset($carrito[$producto->id])){
-            $carrito[$producto->id]['cantidad']++;
-            //carrito[$producto->id]->cantidad+=$cantidad;
-            
-            session()->put('carrito', $carrito);
-            return redirect('carrito', compact('carrito', 'producto'));
-        }
 
-    //Calcular total
-    // public function total(){
-    //     $carrito = session()->get('carrito');
-    //     $total = 0;
-    //     foreach($carrito as $producto){
-    //         $total += $producto['precio'] * $producto['cantidad'];
-    //     }
-    //     return $total;
-    // } 
+
     //public function checkout(){
         // bsjar los productos de la session
         // crear el pedido con los items que compro el usuario
@@ -94,5 +74,4 @@ class CarritoController extends Controller{
         //  back()
     
     //}
-}
 }
