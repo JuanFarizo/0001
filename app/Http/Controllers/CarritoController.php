@@ -50,6 +50,7 @@ class CarritoController extends Controller{
         session()->put('carrito', $carrito);
         return back();
     }
+    
     //Eliminar producto del carrito
     public function delete($id){
         

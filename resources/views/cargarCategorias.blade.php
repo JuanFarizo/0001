@@ -1,12 +1,14 @@
-@extends('layouts.dash')
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<section>
+@extends('layouts.master')
+
+@section('title', 'Cargar categorias')
+
+@section('breadcrumb')
+<li class="breadcrumb-item">
+<a href="{{'/admin/categoria'}}"><i class="fas fa-stream"></i> Categorías</a>
+</li>
+@endsection
+
+@section('content')
 <ul style="color:red" class="errores">
     @foreach ($errors->all() as $error)
         <li>{{$error}}</li>
@@ -42,3 +44,4 @@
 </div>
 </div>
 </section>
+@endsection

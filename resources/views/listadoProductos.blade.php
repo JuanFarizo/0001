@@ -1,33 +1,40 @@
 @extends('layouts.master')
 
 @section('title', 'Productos')
+
 @section('breadcrumb')
-@show
+<li class="breadcrumb-item">
+  <a href="{{ url('/admin/productos') }}"><i class="fas fa-boxes"></i>  Productos</a>
+</li>
+@endsection
 
 @section('content')
 <div class="container-fluid">
-	<table class="table" style="background-color: #fff; width:40%;">
-		
-		<thead style="background-color: #face92">
-		  <tr>
-			<th scope="col">ID</th>
-			<th scope="col">Nombre</th>
-			<th scope="col">Descripción</th>
-			<th scope="col">Precio</th>
-			<th scope="col">Stock</th>
-			<th scope="col">Categoría</th>
-			<th scope="col"></th>
-			<th scope="col"></th>
-			<th scope="col"></th>
-		  </tr>
-		</thead>
-	
-		@foreach ($productos as $producto)
+    <div class="panel shadow">
+     <div class="header">
+      <h2 class="title"><i class="fas fa-users"></i>  Productos</h2>   
+    </div>
+  <div class="inside">
+  <table class="table">
+    <thead>
+      <tr>
+        <td><strong>ID</strong></td>
+        <td><strong>Nombre</strong></td>
+        <td><strong>Descripción</strong></td>
+        <td><strong>Precio</strong></td>
+		<td><strong>Stock</strong></td>
+		<td><strong>Categoria</strong></td>
+		<td><strong>Tipo</strong></td>
+		<td><strong>Opciones</strong></td>
+      </tr>
+    </thead>
+    @foreach ($productos as $producto)
 		<tbody>
 			<tr>
 				<td>{{$producto->id}}</td>
 				<td>{{$producto->nombre}}</td>
 				<td>{{$producto->descripcion}}</td>
+				<td>{{$producto->precio}}</td>
 				<td>{{$producto->stock}}</td>
 				<td>
 					 @foreach ($categorias as $categoria)
@@ -54,13 +61,14 @@
 				
 				</td>
 			</tr>
-		
+		</div>
+		</tbody>
 		@endforeach
-	</tbody>
-	</table>
-<div class="container-fluid">
-  {{$productos->links()}}
- </div>
+</table>
+</div>
+</div>
+</div>
+<div class="container-fluid" style="margin-top: 10px">
+{{$productos->links()}}
 </div>
 @endsection
- 

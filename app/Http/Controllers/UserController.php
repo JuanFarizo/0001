@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class UserController extends Controller {
   
   public function index(){
-    
     $usuarios = User::paginate(6);
     return view('listadoUsuarios', compact('usuarios'));
   }
@@ -20,11 +19,11 @@ class UserController extends Controller {
   }
 
 
-    public function edit($id){
-      $usuario = User::findOrFail($id);
-      $data = ['usuario' => $usuario];
-      return view('editarPerfil', compact("usuario"));
-    }
+    // public function edit($id){
+    //   $usuario = User::findOrFail($id);
+    //   $data = ['usuario' => $usuario];
+    //   return view('editarPerfil', compact("usuario"));
+    // }
 
 
   

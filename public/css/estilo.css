@@ -1,379 +1,340 @@
+
 /*ESTILO DE TODA LA PAGINA*/
 *{
-    box-sizing: border-box;
-  }
-  
-  body{
-    background-color: whitesmoke;
-    font-family:'Muli',sans-serif;
-    margin: 0 auto;
-  
-  }
-  .container{
-    width: 100%;
-  }
-  /*ESTILO EN DEGRADE DE LA PAGINA*/
-  header{
-    text-align: center;
-    background: radial-gradient(50% 50%,#fff, pink);
-  
-  }
-  /*tamaño del icono*/
-  header img{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    top: -13px;
-  }
-  /*diseño de libreria lablic*/
-  h1{
-    font-family: 'Lobster', sans-serif;
-    color: black;
-    display: inline-block;
-    margin-top: 40px;
-  }
-  
-  h1 a:hover  {
-  text-decoration-line: none;
-  color: black;
-  }
-  
-  
-  .nav-link{
-    color:black;
-    font-weight:bold;
-    font-family:'Muli', serif;
-    
-  }
-  
-  .btn-outline-success{
-    color: black;
-    border-color: black;
-  }
-  .navbar-brand {
-    font-family:'Muli', serif;
-  }
-  
-  .navbar-light .navbar-brand {
-    color:  #495057;
-  }
-  
-  .navbar-light .navbar-nav .nav-link {
-    color: #495057;
-  }
-  
-  a.dropdown-item{
-    color: #495057;
-  }
-  
-  .nav-link{
-    font-family:'Muli', serif;
-  }
-  .dropdown-menu .dropdown-item {
-    font-family:'Muli', serif;
-  }
-  .btn-group{
-    float: right;
-  }
-  .card{
-  box-shadow: 0 8px 15px lightgray;
-  border-radius: 10px;
-  transition:opacity .5s;
-  align-items: center;
-  }
-  
-  /*IMG*/
-  .card-img-top:hover{
-    transform: scale(1.09, 1.09);
-    -webkit-transition-timin-function: ease-out;
-    transition-duration: 900ms;
-  }
-  
-
-  .image {
-    border-radius: 9px;
-  }
-  .avatar{
-  height: 24px;
-  width: 26px;
-  border-radius: 14px;
-  margin-top: 11px;
-  margin-right: 4px;
-  position: relative;
-  top: -9px;
-  }
-  
-
-  .card-img-top {
-    width: 420px;
-    height: 220px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-  }
-
-  .image{
-    height:200px;
-    margin:10px auto;
-    display:block;
-    border-radius:15px;
-  }
-
-  .enlace:hover{
-    color:#ff7f9f;
-    text-decoration: none;
-  }
-  .enlace-1:hover{
-    color:#ddd;
-    text-decoration: none;
-  }
-
-  /*boton crud productos*/
-  .btn-primary1{
-   margin-right: 50px;
-  }
-  
-  /*color boton busqueda y de boton ver productos*/
-  .btn-primary{
-    color: #fff;
-    border-color: #f175af;
-    text-shadow: 3px 1px 2.5px #000;
-    background-color:#f783ac;
-  }
-
-  .btn-eye:hover{
-  background-color: white;
-	 color:#42a5f5;
-  }
-
-
-  .btn-primary:hover{
-    background-color: white;
-    color: #f175af;
-    font-weight: bolder;
-    border: 3px solid #f175af;
-    text-shadow: none;
-  }
-  
-  .button-link{
-    text-align: center;
-  }
-  
-  .button-link_2{
-    text-align: center;
-    position: relative;
-    bottom: -20px;
-  }
-  
-  .card{
-    transition-property: opacity;
-    transition-duration: 0.5s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  }
-  
-  .card-text{
-    text-align: center;
-  }
- 
-  /*boton de compra*/
-  .btn-compra{
-    float: right;
-    background-color: transparent;
-  }
-  main{
-    margin: 17px;
-    justify-content: center;
-  }
-  
-  section {
-    margin-left: 70px;
-    margin-right: 70px;
-  }
-  /*diseño carrusel*/
-  
-  .carousel-inner{
-    height:400px;
-  }
-  
-  .carrousel-item img{
-    height: 70vh;
-    min-height: 300px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  
-  /*ESTILO DE PAGINA LOGIN*/
-  .login, .registro{
-    font-family:'Muli', serif;
-    text-align: center;
-    margin-top: 95px;
-    color: black;
-    background-color: black;
-    padding: 5px;
-    font-size: 18px;
-  }
-  input{
-    font-family:'Muli', serif;
-  }
-  
-  button{
-    font-family:'Muli', serif;
-    text-align: center;
-    color: black;
-    padding: 5px;
-    font-size: 18px;
-  }
-  
-  h2{
-    text-align: center;
-    padding: 15px;
-    text-shadow: 2px 1px rgb(128, 124, 124);
-    letter-spacing: 5px;
-  }
-  
-  h5{
-    text-align: center;
-  }
-  /*SECCIÓN PAPELERÍA*/
-  h6{
-    text-align: center;
-  }
-  .sociales{
-    text-align: center;
-  }
-  
-  .ubicacion p{
-    font-size: 12px;
-    text-align: center;
-    margin: 2px;
-  }
-  
-  .vertical-nav{
-    width: 192px;
-  }
-  
-  .list{
-    text-align: left;
-  }
-  
-  /*DASHBOARD*/
-
-  #categorias{
-   overflow: hidden;
-  }
-
-  
-  /*estilo de formularios*/
-.inside{
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  box-sizing: border-box;
 }
-  
 
-  .contenedor-form{
-    margin: 15px;
-    max-width: 500px;
-    background: white;
-    padding: 30px;
-    border: 1px solid gold;
-    width: -webkit-fill-available;
-  
-  }
-  .contenedor-contacto,.contenedor-login,.contenedor-registrar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .formulario label{
-    text-align: left;
-  }
-  
-  .formulario input, .formulario textarea {
-      display: block;
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 100%;
-    }
-  .boton-enviar,.boton-ingresar, .boton-volver,.boton-registrar{
-    background-color: pink;
-    border-color: gold;
-    width: 100%;
-    border-radius: 20px;
-  }
-  
-  textarea {
-    overflow: auto;
-    resize: both;
-  }
-  .form-control {
-    width: auto;
-  }
+body{
+  background-color: whitesmoke;
+  font-family:'Muli',sans-serif;
+  margin: 0 auto;
 
-  /*RECUPERAR-CONTRASEÑA*/
+}
+.container{
+  width: 100%;
+}
+/*ESTILO EN DEGRADE DE LA PAGINA*/
+header{
+  text-align: center;
+  background: radial-gradient(50% 50%,#fff, pink);
+
+}
+/*tamaño del icono*/
+header img{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: -13px;
+}
+/*diseño de libreria lablic*/
+h1{
+  font-family: 'Lobster', sans-serif;
+  color: black;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+h1 a:hover  {
+text-decoration-line: none;
+color: black;
+}
+
+
+.nav-link{
+  color:black;
+  font-weight:bold;
+  font-family:'Muli', serif;
   
-  .container-form {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .contenedor-email {
-    background-color: white;
-    margin-top:20px;
-    padding:20px;
-  }
-  
-  .container-email {
-  max-width:100%;
+}
+
+.btn-outline-success{
+  color: black;
+  border-color: black;
+}
+.navbar-brand {
+  font-family:'Muli', serif;
+}
+
+.navbar-light .navbar-brand {
+  color:  #495057;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #495057;
+}
+
+a.dropdown-item{
+  color: #495057;
+}
+
+.nav-link{
+  font-family:'Muli', serif;
+}
+.dropdown-menu .dropdown-item {
+  font-family:'Muli', serif;
+}
+.btn-group{
+  float: right;
+}
+.card{
+box-shadow: 0 8px 15px lightgray;
+border-radius: 10px;
+transition:opacity .5s;
+align-items: center;
+}
+
+/*IMG*/
+.card-img-top:hover{
+  transform: scale(1.09, 1.09);
+  -webkit-transition-timin-function: ease-out;
+  transition-duration: 900ms;
+}
+
+
+.image {
+  border-radius: 9px;
+}
+.avatar{
+height: 24px;
+width: 26px;
+border-radius: 14px;
+margin-top: 11px;
+margin-right: 4px;
+position: relative;
+top: -9px;
+}
+
+
+.card-img-top {
+  width: 420px;
+  height: 220px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.image{
+  height:200px;
+  margin:10px auto;
+  display:block;
+  border-radius:15px;
+}
+
+.enlace:hover{
+  color:#ff7f9f;
+  text-decoration: none;
+}
+.enlace-1:hover{
+  color:#ddd;
+  text-decoration: none;
+}
+
+/*boton crud productos*/
+.btn-primary1{
+ margin-right: 50px;
+}
+
+/*color boton busqueda y de boton ver productos*/
+.btn-primary{
+  color: #fff;
+  border-color: #f175af;
+  text-shadow: 3px 1px 2.5px #000;
+  background-color:#f783ac;
+}
+
+.btn-eye:hover{
+background-color: white;
+ color:#42a5f5;
+}
+
+
+.btn-primary:hover{
+  background-color: white;
+  color: #f175af;
+  font-weight: bolder;
+  border: 3px solid #f175af;
+  text-shadow: none;
+}
+
+.button-link{
+  text-align: center;
+}
+
+.button-link_2{
+  text-align: center;
+  position: relative;
+  bottom: -20px;
+}
+
+.card{
+  transition-property: opacity;
+  transition-duration: 0.5s;
+transition-timing-function: ease;
+transition-delay: 0s;
+}
+
+.card-text{
+  text-align: center;
+}
+
+/*boton de compra*/
+.btn-compra{
+  float: right;
+  background-color: transparent;
+}
+main{
+  margin: 17px;
+  justify-content: center;
+}
+
+section {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+/*diseño carrusel*/
+
+.carousel-inner{
+  height:400px;
+}
+
+.carrousel-item img{
+  height: 70vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*ESTILO DE PAGINA LOGIN*/
+.login, .registro{
+  font-family:'Muli', serif;
+  text-align: center;
+  margin-top: 95px;
+  color: black;
+  background-color: black;
+  padding: 5px;
+  font-size: 18px;
+}
+input{
+  font-family:'Muli', serif;
+}
+
+button{
+  font-family:'Muli', serif;
+  text-align: center;
+  color: black;
+  padding: 5px;
+  font-size: 18px;
+}
+
+h2{
+  text-align: center;
+  padding: 15px;
+  text-shadow: 2px 1px rgb(128, 124, 124);
+  letter-spacing: 5px;
+}
+
+h5{
+  text-align: center;
+}
+/*SECCIÓN PAPELERÍA*/
+h6{
+  text-align: center;
+}
+.sociales{
+  text-align: center;
+}
+
+.ubicacion p{
+  font-size: 12px;
+  text-align: center;
+  margin: 2px;
+}
+
+.vertical-nav{
+  width: 192px;
+}
+
+.list{
+  text-align: left;
+}
+
+/*DASHBOARD*/
+
+#categorias{
+ overflow: hidden;
+}
+
+
+/*estilo de formularios*/
+.inside{
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+
+
+.contenedor-form{
+  margin: 15px;
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border: 1px solid gold;
+  width: -webkit-fill-available;
+
+}
+.contenedor-contacto,.contenedor-login,.contenedor-registrar{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.formulario label{
+  text-align: left;
+}
+
+.formulario input, .formulario textarea {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
   }
-  
-  input {
-    border-radius: .25rem;
-    }
-  
-    .campo-email{
-        width: 140%;
-    }
-  
-  .button-enviar{
-    align-items: flex-end;
-  }
-  
-  .enviar {
-    text-align: center;
-   background-color:pink;
-   border-color:gold;
-   color:black;
-   width:35%;
-   border-radius: 20px;
-   align-items: flex-end;
-  }
-  
-  a {
-    color:black;
-  }
-  
-  .categoria:hover {
-    color:hotpink;
-    transition: 0.3s;
-    transform: scale(1.2);
-    color: white;
-  }
-  
-  .container-link{
-  position: relative;
-  float:right;
-  line-height: 40px;
-  }
-  
-  
-  /*PERFIL-USUARIO*/
+.boton-enviar,.boton-ingresar, .boton-volver,.boton-registrar{
+  background-color: pink;
+  border-color: gold;
+  width: 100%;
+  border-radius: 20px;
+}
+
+textarea {
+  overflow: auto;
+  resize: both;
+}
+.form-control {
+  width: auto;
+}
+
+
+
+a {
+  color:black;
+}
+
+.categoria:hover {
+  color:hotpink;
+  transition: 0.3s;
+  transform: scale(1.2);
+  color: white;
+}
+
+.container-link{
+position: relative;
+float:right;
+line-height: 40px;
+}
+
+
+/*PERFIL-USUARIO*/
 .container-login{
 margin-top: 130px;
 width:100%;
@@ -387,180 +348,284 @@ background: -webkit-linear-gradient(to right, #fde3a3, #fb9abc);
 background: linear-gradient(to right, #fde3a3, #fb9abc);
 }
 
- .panel{
-   width:70px;
-   background-color: white;
- }
+.panel{
+ width:70px;
+ background-color: white;
+}
 
 #avatar-usuario{
-    display:block;
-    height:100px;
-    width:100px;
-    border-radius:50px;
-    margin: 15 auto;
-  }
+  display:block;
+  height:100px;
+  width:100px;
+  border-radius:50px;
+  margin: 15 auto;
+}
 
-  .form-group{
-    padding-left: 16px;
-  }
-  
+.form-group{
+  padding-left: 16px;
+}
 
 
-  h2.title{
-    color: #2c3246;
-    font-size: 1.1em;
-    text-shadow: none;
-    padding: 12px 16px;
-    margin-bottom: auto;
-  }
+
+h2.title{
+  color: #2c3246;
+  font-size: 1.1em;
+  text-shadow: none;
+  padding: 12px 16px;
+  margin-bottom: auto;
+}
 
 
 
 .btn-perfil{
-  margin-bottom: 15px;
-  position: relative;
-  right: -250px;
+margin-bottom: 15px;
+position: relative;
+right: -250px;
 }
 
 span{
-    
+  
+  width:100%;
+}
+
+/*SECCION FAQ*/
+.pregunta{
+  text-align: left;
+}
+.contenedor-FAQ {
+margin-top: 15px;
+background-color: white;
+}
+.preguntas{
+  background-color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.enviar-faq{
+  text-align: center;
+  background-color:pink;
+  border-color:gold;
+  color:black;
+  width:20%;
+  border-radius: 20px;
+  align-items: flex-end;
+}
+
+
+/*FOOTER*/
+footer{
+  border-top: 2px solid pink;
+  background-color: rgba(255, 99, 71, 0.5);
+  flex: 0 0 auto;
+}
+
+h6{
+  text-align: center;
+}
+.sociales{
+  text-align: center;
+}
+.sociales button{
+  background-color: pink;
+  border-radius: 50%;
+  border-color: gold;
+
+}
+h4{
+  font-size: 15px;
+  text-align: center;
+}
+.ubicacion p{
+  font-size: 12px;
+  text-align: center;
+  margin: 2px;
+}
+
+.fa-shopping-cart:hover{
+  transition: 0.3s;
+  transform: scale(1.2);
+  color:rgb(255, 4, 129);
+}
+
+/*LISTADO-PRODUCTOS*/
+.btn .btn-link {
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.titulo{
+font-family: 'Cinzel Decorative', cursive;
+}
+.detalle-libro{
+text-align: left;
+color:black;
+text-transform: uppercase;
+}
+
+.card-body:hover{
+  color: hotpink;
+}
+
+.card-text{
+  text-decoration: none;
+}
+
+.container-cards{
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 5px 10px lightgray;
+  border-radius: 6px;
+}
+
+.boton-comprar{
+  background-color: pink;
+  border-color: gold;
+  width: 30%;
+  border-radius: 20px;
+}
+
+
+.titulo-libro{
+  text-transform: uppercase;
+}
+.precio{
+  text-align: center;
+}
+
+
+
+
+
+/*CARRITO*/
+
+.cantidad {
+  width: 50px;
+}
+
+
+
+ul,body,html{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*DASHBOARD*/
+.wrapper{
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .col1{
+    float:left;
+    position:relative;
+    z-index:999;
+    width:17%;
+  }
+  
+  .col2{
+    float:left;
+    width: 83%;
+  }
+
+  
+  .sidebar{
+    background-color: #fff;
+    min-height: 100vh;
+  }
+
+
+
+  /*SIDEBAR DASH*/
+  .section-top{
+    background-color:#ff89c0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+
+  .user{
+    color: white;
+    padding: 16px;
+  }
+
+  .main{
+    display: block;
+    margin-top:8px;
+  }
+  
+  .main ul li {
+   margin-bottom: 4px;
+  }
+  
+   ul{
+    list-style: none;
+   }
+
+   ul a{
+   color:rgb(32, 31, 31);
+   }
+   
+   a{
+     text-decoration:none;
+   }
+
+ .enlace{
+   color:rgb(53, 53, 53);
+   display:block;
+   font-size:1.1em;
+   padding: 10px 0px 16px 0px;
+   text-align:center;
+ }
+
+.navbar{
+  background-color:#ff89c0;
+}
+
+ li .enlace:hover{
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 1.1em;
+    background-color: #f590a1;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .page{
+      padding-top: 16px;
+      padding-bottom:16px;
+  }
+
+  .breadcrumb{
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.10) !important;
+  }
+
+  .breadcrumb-item{
+    color:#525252;
+  }
+
+
+  .panel{
+    background-color:#fff;
+    border-radius:6px;
+    border-bottom:4px solid #f8d06b;
     width:100%;
   }
 
-  /*SECCION FAQ*/
-  .pregunta{
-    text-align: left;
-  }
-  .contenedor-FAQ {
-  margin-top: 15px;
-  background-color: white;
-  }
-  .preguntas{
-    background-color: white;
-    padding-left: 25px;
-    padding-right: 25px;
+  .header{
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #fde3a3;
   }
   
-  .enviar-faq{
-    text-align: center;
-    background-color:pink;
-    border-color:gold;
-    color:black;
-    width:20%;
-    border-radius: 20px;
-    align-items: flex-end;
-  }
-  
-  
-  /*FOOTER*/
-  footer{
-    border-top: 2px solid pink;
-    background-color: rgba(255, 99, 71, 0.5);
-    flex: 0 0 auto;
-  }
-  
-  h6{
-    text-align: center;
-  }
-  .sociales{
-    text-align: center;
-  }
-  .sociales button{
-    background-color: pink;
-    border-radius: 50%;
-    border-color: gold;
-  
-  }
-  h4{
-    font-size: 15px;
-    text-align: center;
-  }
-  .ubicacion p{
-    font-size: 12px;
-    text-align: center;
-    margin: 2px;
-  }
-  
-  .fa-shopping-cart:hover{
-    transition: 0.3s;
-    transform: scale(1.2);
-    color:rgb(255, 4, 129);
-  }
-  
-  /*LISTADO-PRODUCTOS*/
-  .btn .btn-link {
-      font-weight: 400;
-      color: black;
-      text-decoration: none;
-      text-align: center;
+  h2.title{
+    display: inline-block;
+    color:#000000;
+    font-size: 1.1em;
+    padding: 12px 16px;
   }
 
-  
-.titulo{
-  font-family: 'Cinzel Decorative', cursive;
-}
-  .detalle-libro{
-  text-align: left;
-  color:black;
-  text-transform: uppercase;
+  .inside{
+    padding: 16px;
   }
- 
-  
-  
-  .container-cards{
-    display: flex;
-    justify-content: space-around;
-    box-shadow: 0 5px 10px lightgray;
-    border-radius: 6px;
-  }
-  
-  .boton-comprar{
-    background-color: pink;
-    border-color: gold;
-    width: 30%;
-    border-radius: 20px;
-  }
-  
-  
-  .titulo-libro{
-    text-transform: uppercase;
-  }
-  .precio{
-    text-align: center;
-  }
-  
-  /*LISTADO-PAPELERIA*/
-  /**ÚTILES ESCOLARES**/
-  .container-cards-1{
-    display: flex;
-    justify-content: space-around;
-    border-radius: 6px 6px 0px 0px;
-  }
-  
-  
-  
-  /*DETALLE-PRODUCTO*/
-  .container-detalle{
-    display:flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-left: 20px;
-  }
-  .boton-comprar {
-    text-align: center;
-  }
-  
-  ul li{
-    list-style: none;
-  }
-  
-
-  /*CARRITO*/
-
-  .cantidad {
-    width: 50px;
-  }
-  
-
-
- 

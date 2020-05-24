@@ -1,11 +1,13 @@
-@extends('layouts.dash')
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+@extends('layouts.master')
+
+@section('title', 'Productos')
+
+@section('breadcrumb')
+<li class="breadcrumb-item">
+<a href="{{'/admin/producto'}}"><i class="fas fa-boxes"></i> Productos</a>
+</li>
+@endsection
+
 <ul style="color:red" class="errores">
     @foreach ($errors->all() as $error)
         <li>{{$error}}</li>

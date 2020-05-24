@@ -11,43 +11,46 @@
     <script src="https://kit.fontawesome.com/6ac70a7b0a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset("css/admin.css")}}">
+    <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
     <link rel="shortcut icon" href="{{asset("img/librito-icono.ico")}}"/>
     <title>@yield('title') - Libreria Lablic</title>
   </head>
   <body>
-    
     <div class="wrapper">
-     <div class="col1">@include('layouts.sidebar')</div>
+      <div class="col1">@include('layouts.sidebar')</div>
       <div class="col2">
-       <nav class="navbar navbar-expand-lg shadow">
-         <div class="collapse navbar-collapse">
-           <ul class="navbar-nav">
-            <li class="nav-item">
-            <a href="/inicio" class="navbar-brand"><i class="fas fa-home" aria-hidden="true"></i> Home</a> 
-              <a href="{{url('/admin')}}"><i class="fas fa-table" class="nav-link"></i>  Dashboard</a>
-          </ul>
-     </div>
-</nav>
-</div>
-
-   <div class="page">
-  
-    <div class="container-fluid">
-      <nav aria-label="breadcrumb shadow">
+      <nav class="navbar navbar-expand-lg shadow">
+       <div class="collapse navbar-collapse">
+         <ul class="navbar-nav">
+           <li class="nav-item">
+             <a href="{{url('/inicio')}}" class="nav-link"><i class="fas fa-home"></i> Home</a>
+           </li>
+           <li class="nav-item">
+            <a href="{{url('/admin')}}" class="nav-link"><i class="fas fa-table"></i>  Dashboard</a>
+          </li>
+         </ul>
+       </div>
+       </nav>
+      
+       <div class="page">
+       <div class="container-fluid">
+        <nav aria-label="breadcrumb shadow">
          <ol class="breadcrumb">
-           <li class="breadcrumb-item">
-             <a href="{{url('/admin')}}"><i class="fas fa-table"></i>  Dashboard</a>
+          <li class="breadcrumb-item">
+         <a href="{{url('/admin')}}" class="nav-link"><i class="fas fa-table"></i>  Dashboard</a>
         </li>
         @section('breadcrumb')
-       @show
-       </ol>
-      </nav>
+          @show
+         </ol>
+
+        </nav>
+      </div>
+
+      @section('content')
+          @show
+
+     </div>
      </div>
     </div>
-     @section('content')
-   @show
-   </div>
-  
   </body>
 </html>
