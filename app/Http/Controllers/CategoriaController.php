@@ -75,8 +75,8 @@ class CategoriaController extends Controller
      */
     public function show($categorium)
     {
-        // $categoria = Categoria::find($categorium);
-        // return view('editarCategorias', compact('categoria'));
+        $categoria = Categoria::find($categorium);
+        return view('editarCategorias', compact('categoria'));
     }
 
     /**

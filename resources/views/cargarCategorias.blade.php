@@ -25,7 +25,7 @@
         </div>
       
       
-      <form action="/admin/producto" method="post" enctype="multipart/form-data">
+      <form action="/admin/categoria" method="post" enctype="multipart/form-data">
           {{csrf_field()}}
         
       
