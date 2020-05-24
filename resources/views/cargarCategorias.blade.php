@@ -4,7 +4,10 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-<a href="{{'/admin/categoria'}}"><i class="fas fa-stream"></i> Categorías</a>
+<a class="bread" href="{{'/admin/categoria'}}"><i class="fas fa-stream"></i> Categorías</a>
+<li class="breadcrumb-item">
+	<a class="bread" href="/admin/categoria/create"><i class="fas fa-plus"></i>  Agregar categoría</a>
+  </li>
 </li>
 @endsection
 
@@ -14,34 +17,59 @@
         <li>{{$error}}</li>
     @endforeach
     </ul>
-<form action="/admin/categoria" method="post" enctype="multipart/form-data">
-    {{csrf_field()}}
-<div>
-    <strong><label for="nombre">{{"Nombre"}}: </label></strong>
-    <br>
-    <input type="text" name="nombre" value="">
-</div>
-<br>
-<div>
-    <strong><label for="">Descripción: </label></strong>
-   </div>
-<div>
-    <textarea id="descripcion" name="descripcion" value="{{old("descripcion")}}" placeholder="Escriba el contenido.."></textarea>
-   </div>
-   <br>
-<div>
-    <strong><label for="imagen">Imagen: </label></strong>
-      <input type="file" name="imagen" id="imagen">
-    </div>
-<div>
-    <strong><label for="imagen">Seleccione el tipo  de categoria a cargar:  </label></strong>
-    <input type="radio" name="esLibro" value="1"> Libro	
-    <input type="radio" name="esLibro" value="0"> Papeleria	
-  </div>
-<button type="submit">Guardar</button>
-<a href="/admin/categoria" class="btn btn-default">Cancelar</a>
-</form>
-</div>
-</div>
-</section>
+    
+    <div class="container-fluid">
+        <div class="panel shadow">
+         <div class="header">
+          <h2 class="title"><i class="fas fa-edit"></i>  Categorías</h2>   
+        </div>
+      
+      
+      <form action="/admin/producto" method="post" enctype="multipart/form-data">
+          {{csrf_field()}}
+        
+      
+          <div class="form-row" style="padding:25px 25px;">
+          <div class="col-md-6 mb-3">
+            <strong><label for="inputName">Nombre</label></strong>
+            <input type="text" class="form-control" id="inputName" value="">
+          </div>
+      
+        <div class="col-md-6 mb-3" style="overflow: auto;
+        resize: both;">
+          <strong><label for="exampleFormControlTextarea1">Descripción</label></strong>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+
+          <div class="form-group col-md-6">
+          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+          <label class="custom-file-label" for="inputGroupFile01">Subir imagen</label>
+        </div>
+      
+        <div class="form-group col-md-9">
+            <strong><label for="imagen">Seleccione el tipo  de categoria:  </label></strong>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Libro</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Papelería</label>
+            </div>
+          </div>
+
+       <div class="container-fluid">
+         <button class="btn btn" style="background-color:#ff89c0; color:rgb(255, 255, 243)" type="submit">Guardar</button>
+         <a href="/admin/categoria" class="btn btn-default" style="background-color:#ff89c0; color:rgb(255, 255, 243);">Cancelar</a>
+        </div>
+      
+          </div>
+      </form>
+      
+      </div>
+      </div>  
+
+
+
+
 @endsection

@@ -4,11 +4,15 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-  <a href="{{ url('/admin/productos') }}"><i class="fas fa-boxes"></i>  Productos</a>
+  <a class="bread" href="{{ url('/admin/producto') }}"><i class="fas fa-boxes"></i>  Productos</a>
+  <li class="breadcrumb-item">
+	<a class="bread" href="/admin/producto/create"><i class="fas fa-plus"></i>  Agregar producto</a>
+  </li>
 </li>
 @endsection
 
 @section('content')
+
 <div class="container-fluid">
     <div class="panel shadow">
      <div class="header">

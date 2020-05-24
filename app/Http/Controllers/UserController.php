@@ -19,11 +19,11 @@ class UserController extends Controller {
   }
 
 
-    // public function edit($id){
-    //   $usuario = User::findOrFail($id);
-    //   $data = ['usuario' => $usuario];
-    //   return view('editarPerfil', compact("usuario"));
-    // }
+    public function edit($id){
+      $usuario = User::findOrFail($id);
+      $data = ['usuario' => $usuario];
+      return view('editarPerfil', compact("usuario"));
+    }
 
 
   

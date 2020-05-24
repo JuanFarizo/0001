@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="{{asset("img/librito-icono.ico")}}"/>
     <title>@yield('title') - Libreria Lablic</title>
   </head>
-  <body>
+  <body class="dashboard">
     <div class="wrapper">
       <div class="col1">@include('layouts.sidebar')</div>
       <div class="col2">
@@ -37,7 +37,7 @@
         <nav aria-label="breadcrumb shadow">
          <ol class="breadcrumb">
           <li class="breadcrumb-item">
-         <a href="{{url('/admin')}}" class="nav-link"><i class="fas fa-table"></i>  Dashboard</a>
+         <a href="{{url('/admin')}}" class="nav-link1"><i class="fas fa-table"></i>  Dashboard</a>
         </li>
         @section('breadcrumb')
           @show

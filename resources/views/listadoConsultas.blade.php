@@ -2,6 +2,12 @@
 
 @section('title', 'Consultas')
 
+@section('breadcrumb')
+<li class="breadcrumb-item">
+<a href="{{'/admin/producto'}}"><i class="fas fa-laptop"></i> Contacto</a>
+</li>
+@endsection
+
 @section('content')
 <div class= "container-fluid">
 <div class="row">

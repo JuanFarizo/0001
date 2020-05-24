@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-<a href="{{'/admin/categoria'}}"><i class="fas fa-stream"></i> Categorías</a>
+<a class="bread" href="{{'/admin/categoria'}}"><i class="fas fa-stream"></i> Categorías</a>
 </li>
 @endsection
 

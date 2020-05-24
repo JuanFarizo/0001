@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-  <a href="{{ url('/admin/usuarios') }}"><i class="fas fa-users"></i>  Usuarios</a>
+  <a class="bread" href="{{ url('/admin/usuarios') }}"><i class="fas fa-users"></i>  Usuarios</a>
 </li>
 @endsection
 

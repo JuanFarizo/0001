@@ -17,7 +17,7 @@
     <title>Libreria Lablic</title>
 
   </head>
-  <body>
+  <body class="principal">
 
 <!------------INICIO HEADER--------------------------------->
 

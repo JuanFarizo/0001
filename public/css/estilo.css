@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body{
+.principal{
   background-color: whitesmoke;
   font-family:'Muli',sans-serif;
   margin: 0 auto;
@@ -42,9 +42,8 @@ color: black;
 
 .nav-link{
   color:black;
-  font-weight:bold;
   font-family:'Muli', serif;
-  
+ 
 }
 
 .btn-outline-success{
@@ -73,6 +72,7 @@ a.dropdown-item{
 .dropdown-menu .dropdown-item {
   font-family:'Muli', serif;
 }
+
 .btn-group{
   float: right;
 }
@@ -142,11 +142,6 @@ top: -9px;
   background-color:#f783ac;
 }
 
-.btn-eye:hover{
-background-color: white;
- color:#42a5f5;
-}
-
 
 .btn-primary:hover{
   background-color: white;
@@ -177,11 +172,7 @@ transition-delay: 0s;
   text-align: center;
 }
 
-/*boton de compra*/
-.btn-compra{
-  float: right;
-  background-color: transparent;
-}
+
 main{
   margin: 17px;
   justify-content: center;
@@ -207,90 +198,20 @@ section {
   background-size: cover;
 }
 
-/*ESTILO DE PAGINA LOGIN*/
-.login, .registro{
-  font-family:'Muli', serif;
-  text-align: center;
-  margin-top: 95px;
-  color: black;
-  background-color: black;
-  padding: 5px;
-  font-size: 18px;
-}
-input{
-  font-family:'Muli', serif;
-}
-
-button{
-  font-family:'Muli', serif;
-  text-align: center;
-  color: black;
-  padding: 5px;
-  font-size: 18px;
-}
-
-h2{
-  text-align: center;
-  padding: 15px;
-  text-shadow: 2px 1px rgb(128, 124, 124);
-  letter-spacing: 5px;
-}
-
-h5{
-  text-align: center;
-}
-/*SECCIÓN PAPELERÍA*/
-h6{
-  text-align: center;
-}
-.sociales{
-  text-align: center;
-}
-
-.ubicacion p{
-  font-size: 12px;
-  text-align: center;
-  margin: 2px;
-}
-
-.vertical-nav{
-  width: 192px;
-}
-
-.list{
-  text-align: left;
-}
-
-/*DASHBOARD*/
-
-#categorias{
- overflow: hidden;
-}
-
-
-/*estilo de formularios*/
-.inside{
-margin-bottom: 1rem;
-margin-top: 1rem;
-}
-
-
+/*ESTILO DE FORMULARIO*/
 .contenedor-form{
   margin: 15px;
   max-width: 500px;
-  background: white;
+  background-color: white;
   padding: 30px;
   border: 1px solid gold;
-  width: -webkit-fill-available;
-
+  box-shadow: 5px solid black;
 }
-.contenedor-contacto,.contenedor-login,.contenedor-registrar{
+
+.contenedor-contacto{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.formulario label{
-  text-align: left;
 }
 
 .formulario input, .formulario textarea {
@@ -311,9 +232,34 @@ textarea {
   resize: both;
 }
 .form-control {
-  width: auto;
+  width: 50%;
 }
 
+/*ESTILO DE PAGINA LOGIN*/
+.login, .registro{
+  font-family:'Muli', serif;
+  text-align: center;
+  margin-top: 95px;
+  color: black;
+  background-color: black;
+  padding: 5px;
+  font-size: 18px;
+}
+input{
+  font-family:'Muli', serif;
+}
+
+
+h2{
+  text-align: center;
+  padding: 15px;
+  text-shadow: 2px 1px rgb(128, 124, 124);
+  letter-spacing: 5px;
+}
+
+h5{
+  text-align: center;
+}
 
 
 a {
@@ -362,8 +308,10 @@ background: linear-gradient(to right, #fde3a3, #fb9abc);
 }
 
 .form-group{
-  padding-left: 16px;
+  padding: 25px 25px;
 }
+
+/*CONTACTO*/
 
 
 
@@ -387,31 +335,6 @@ span{
   
   width:100%;
 }
-
-/*SECCION FAQ*/
-.pregunta{
-  text-align: left;
-}
-.contenedor-FAQ {
-margin-top: 15px;
-background-color: white;
-}
-.preguntas{
-  background-color: white;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.enviar-faq{
-  text-align: center;
-  background-color:pink;
-  border-color:gold;
-  color:black;
-  width:20%;
-  border-radius: 20px;
-  align-items: flex-end;
-}
-
 
 /*FOOTER*/
 footer{
@@ -448,72 +371,19 @@ h4{
   color:rgb(255, 4, 129);
 }
 
-/*LISTADO-PRODUCTOS*/
-.btn .btn-link {
-    font-weight: 400;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-}
-
-
-.titulo{
-font-family: 'Cinzel Decorative', cursive;
-}
-.detalle-libro{
-text-align: left;
-color:black;
-text-transform: uppercase;
-}
-
-.card-body:hover{
-  color: hotpink;
-}
-
-.card-text{
-  text-decoration: none;
-}
-
-.container-cards{
-  display: flex;
-  justify-content: space-around;
-  box-shadow: 0 5px 10px lightgray;
-  border-radius: 6px;
-}
-
-.boton-comprar{
-  background-color: pink;
-  border-color: gold;
-  width: 30%;
-  border-radius: 20px;
-}
-
-
-.titulo-libro{
-  text-transform: uppercase;
-}
-.precio{
-  text-align: center;
-}
-
-
-
-
-
-/*CARRITO*/
-
-.cantidad {
-  width: 50px;
-}
-
-
-
-ul,body,html{
-    padding: 0px;
-    margin: 0px;
-}
 
 /*DASHBOARD*/
+
+ul,html{
+  padding: 0px;
+  margin: 0px;
+}
+.dashboard{
+padding: 0px;
+ margin: 0px;
+ font-size: 16px;
+}
+
 .wrapper{
     min-height: 100vh;
     overflow: hidden;
@@ -537,7 +407,19 @@ ul,body,html{
     min-height: 100vh;
   }
 
+  .nav-link:hover{
+    color:black;
+  }
+ 
+ .nav-link1:hover{
+   text-decoration: none;
+   color:black;
+ }
 
+ .bread:hover{
+    text-decoration: none;
+    color:black;
+ }
 
   /*SIDEBAR DASH*/
   .section-top{
