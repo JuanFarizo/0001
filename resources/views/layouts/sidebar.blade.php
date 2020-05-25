@@ -27,7 +27,7 @@
         <a class="enlace" href="/admin/usuarios"><i class="fas fa-users"></i>  Usuarios</a>
       </li>
       <li>
-        <a class="enlace" href="/admin/contacto"><i class="fas fa-laptop"></i>  Contacto</a>
+        <a class="enlace" href="/admin/contacto"><i class="fas fa-laptop"></i>  Consultas</a>
       </li>
       </ul>
       </div>

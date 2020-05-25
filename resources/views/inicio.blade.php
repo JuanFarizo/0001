@@ -1,4 +1,5 @@
 @extends("layouts.libreria")
+@section('title', 'Home')
 @section('content')
     <main style="margin-top:200px" >
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">

@@ -2,6 +2,7 @@
 <br>
 <br>
 <br>
+@section('title', 'Contacto')
 @section('content')
 
     <ul style="color:red" class="errores">

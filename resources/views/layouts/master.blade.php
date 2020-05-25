@@ -13,7 +13,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
     <link rel="shortcut icon" href="{{asset("img/librito-icono.ico")}}"/>
-    <title>@yield('title') - Libreria Lablic</title>
+    <title>Dashboard @yield('title') - Libreria Lablic</title>
   </head>
   <body class="dashboard">
     <div class="wrapper">

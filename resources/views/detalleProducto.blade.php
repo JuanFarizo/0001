@@ -1,5 +1,5 @@
 @extends("layouts.libreria")
-
+@section('title',"$producto->nombre")
 @section('content')
 
     <div class="container-fluid">

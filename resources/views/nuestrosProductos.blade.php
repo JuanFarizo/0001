@@ -1,4 +1,5 @@
 @extends("layouts.libreria")
+@section('title', 'Nuestros productos')
 @section('content')
 <main class="main-products" style="margin-top:200px">
 

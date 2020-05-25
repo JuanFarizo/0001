@@ -14,7 +14,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categorias = Categoria::paginate(6);
+        $categorias = Categoria::paginate(10);
         return view('listadoCategorias', compact('categorias'));
     }
 

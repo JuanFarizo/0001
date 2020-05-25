@@ -7,7 +7,7 @@
 <br>
 <br>
 <br>
-
+@section('title', 'Carrito')
 
 @section('content')
 <h3>Carrito de compras</h3>

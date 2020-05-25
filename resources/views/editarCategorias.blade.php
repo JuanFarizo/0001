@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Categorias')
+@section('title', 'Editar categorias')
 
 @section('breadcrumb')
 <li class="breadcrumb-item">

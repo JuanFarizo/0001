@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-<a href="{{'/admin/producto'}}"><i class="fas fa-laptop"></i> Contacto</a>
+<a href="{{'/admin/contacto'}}"><i class="fas fa-laptop"></i> Consultas</a>
 </li>
 @endsection
 

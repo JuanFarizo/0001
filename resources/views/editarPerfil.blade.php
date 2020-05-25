@@ -1,5 +1,5 @@
 @extends("layouts.libreria")
-
+@section('title', 'Editar perfil')
 @section('content')
 
 <div class="container-login">

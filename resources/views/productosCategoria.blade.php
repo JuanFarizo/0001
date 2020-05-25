@@ -9,10 +9,7 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+@section('title', $categoria->nombre)
 @section('content')
 
 <div class="d-none d-md-block" style="">
