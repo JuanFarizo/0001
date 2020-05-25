@@ -1,5 +1,7 @@
-@extends('layouts.header')
-<br>
+@extends("layouts.libreria")
+
+@section('content')
+
 <div class="container-login">
 <form action="/perfil-usuario/{{auth()->user()->id}}" method="post">
   @method('PUT')
@@ -36,4 +38,4 @@
 </div>
 
 
-@extends('layouts.footer')
+@endsection

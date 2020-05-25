@@ -1,6 +1,5 @@
-@extends("layouts.header")
-<br>
-
+@extends("layouts.libreria")
+@section('content')
 <main class="main-products" style="margin-top:200px">
 
     <div class="listado-productos">
@@ -55,4 +54,5 @@
   </div>
   </section>
 </main>
-@extends("layouts.footer")
+
+@endsection

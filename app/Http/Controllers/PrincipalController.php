@@ -11,7 +11,7 @@ class PrincipalController extends Controller
     public function inicio () {
         $productos = Producto::all();
         $categorias = Categoria::all();
-        return view('libreria', compact('productos', 'categorias'));
+        return view('inicio', compact('productos', 'categorias'));
     }
     
     public function productosCategoria($id)
@@ -28,7 +28,7 @@ class PrincipalController extends Controller
         $categorias = Categoria::all();
         $categoriaLibros = Categoria::where('esLibro', 1)->get();
         $categoriaPapeleria = Categoria::where('esLibro', 0)->get();
-        return view('muestraProductos', compact('productos','categorias', 'categoriaLibros', 'categoriaPapeleria'));
+        return view('nuestrosProductos', compact('productos','categorias', 'categoriaLibros', 'categoriaPapeleria'));
     }
 
      //Muestra  detalle de producto

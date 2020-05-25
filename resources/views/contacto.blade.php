@@ -1,12 +1,8 @@
-@extends("layouts.header")
+@extends("layouts.libreria")
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+@section('content')
 
     <ul style="color:red" class="errores">
         @foreach ($errors->all() as $error)
@@ -52,4 +48,4 @@
   </div>
 </main>
 
-@extends("layouts.footer")
+@endsection

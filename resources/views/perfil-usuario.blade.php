@@ -1,8 +1,10 @@
-@extends('layouts.header')
+@extends("layouts.libreria")
+
+@section('content')
 
 <div class="container-login">
-<div class="card bg-light mb-3" style="width:50%">
-  <div class="card-header" style="background-color: #fde3a3; width:100%; height:60px">
+<div class="card bg-light" style="width:50%">
+  <div class="card-header" style="background-color: #fde3a3; width:100%;">
     <h2 class="title"><i class="fas fa-user"></i>Información</h2>
   </div>
   <div class="">
@@ -24,3 +26,5 @@
   </div>
 </div>
 </div>
+
+@endsection

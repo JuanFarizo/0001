@@ -1,4 +1,5 @@
-@extends("layouts.header")
+@extends("layouts.libreria")
+@section('content')
     <main style="margin-top:200px" >
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -90,4 +91,5 @@
               </div>         
             </section>
     </main>
-    @extends("layouts.footer")
+    
+ @endsection

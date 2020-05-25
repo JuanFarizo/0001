@@ -74,7 +74,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book-open"></i> Libros</a>
             <div class="dropdown-menu">
 
-              @foreach ($errors as $item)
+              @foreach ($categorias as $item)
               @if ($item->esLibro == 1)
               <a class="dropdown-item" href="{{route('libros', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
               @endif
@@ -86,7 +86,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-pencil-alt"></i> Papelería</a>
 
             <div class="dropdown-menu">
-              @foreach ($errors as $item)
+              @foreach ($categorias as $item)
               @if ($item->esLibro == 0)
               <a class="dropdown-item" href="{{route('papeleria', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
             @endif
@@ -133,3 +133,32 @@
       </div>
     </nav>
   </header>
+  
+<!-----------CONTENIDO DE LA PÁGINA---------->
+
+  <main role="main" class="container-fluid">
+    @yield('content')
+</main>
+ 
+<!-----------FOOTER---------->
+<footer class="">
+  <div class="footer">
+      <div class="row">
+        <div class="col-sm-6 ubicacion">
+          <h4>Ubicación</h4>
+          <p>Mitre 100</p>
+          <p>Rosario,Santa Fe</p>
+          <p> © 2019-2020 Todos los derechos reservados</p>
+        </div>
+        <div class="col-sm-6">
+          <h4>Encontranos en nuestras redes</h4>
+          <div class="sociales">
+            <button type="button" name="button"><i class="fab fa-linkedin"></i></button>
+            <button type="button" name="button"><i class="fab fa-instagram"></i></button>
+            <button type="button" name="button"><i class="fab fa-facebook"></i></button>
+            <button type="button" name="button"><i class="fab fa-twitter"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>

@@ -22,7 +22,7 @@
   <div class="panel shadow">
     
    <div class="header">
-    <h2 class="title"><i class="fas fa-edit"></i>  Productos</h2>   
+    <h2 class="title"><i class="fas fa-edit"></i>  Editar producto</h2>   
   </div>
 
 

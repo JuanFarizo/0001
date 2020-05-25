@@ -129,11 +129,6 @@ top: -9px;
   text-decoration: none;
 }
 
-/*boton crud productos*/
-.btn-primary1{
- margin-right: 50px;
-}
-
 /*color boton busqueda y de boton ver productos*/
 .btn-primary{
   color: #fff;
@@ -313,8 +308,6 @@ background: linear-gradient(to right, #fde3a3, #fb9abc);
 
 /*CONTACTO*/
 
-
-
 h2.title{
   color: #2c3246;
   font-size: 1.1em;
@@ -374,7 +367,7 @@ h4{
 
 /*DASHBOARD*/
 
-ul,html{
+ul{
   padding: 0px;
   margin: 0px;
 }
@@ -510,4 +503,11 @@ padding: 0px;
 
   .inside{
     padding: 16px;
+  }
+
+  /*CATEGORIAS Y PRODUCTOS (VISTA: productosCategoria)*/
+  .list-group-item{
+    box-shadow: 0 8px 15px rgb(179, 172, 172);
+    border-radius: 10px 10px 10px 10px;
+   border-radius: 10px;
   }

@@ -20,11 +20,11 @@
   <div class="panel shadow">
     
    <div class="header">
-    <h2 class="title"><i class="fas fa-edit"></i>  Categoría</h2>   
+    <h2 class="title"><i class="fas fa-edit"></i>  Editar categoría</h2>   
   </div>
 
 
-<form action="admin/categoria/{{$categoria->id}}" method="post" enctype="multipart/form-data">
+<form action="{{url('/admin/categoria')}}" method="post" enctype="multipart/form-data">
     {{csrf_field()}}
     @method('PUT')
 

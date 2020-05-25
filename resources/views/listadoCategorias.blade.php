@@ -15,7 +15,7 @@
  <div class="container-fluid">
   <div class="panel shadow">
    <div class="header">
-    <h2 class="title"><i class="fas fa-stream"></i> Categorías</h2>   
+    <h2 class="title"><i class="fas fa-stream"></i> Categoría</h2>   
   </div>
 <div class="inside">
 <table class="table">

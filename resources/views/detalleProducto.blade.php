@@ -1,14 +1,8 @@
-@extends("layouts.header")
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+@extends("layouts.libreria")
 
-<main>
-    <div class="container">
+@section('content')
+
+    <div class="container-fluid">
     <h2> {{$producto->nombre}}</h2>
     <div class="container">
     <ul>
@@ -41,6 +35,5 @@
     </ul>
     </div>
 </div>
-</main>
 
-@extends("layouts.footer")
+@endsection

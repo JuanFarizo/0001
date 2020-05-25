@@ -12,13 +12,14 @@ class CarritoController extends Controller{
     
     //Mostrar carrito
     public function carrito(){
-        return view('carrito');
+        $categorias = Categoria::all();
+        return view('carrito', compact('categorias'));
     }
     
     //Agregar producto al carrito
     public function add($id){
         $producto = Producto::find($id);
-        
+        $categorias = Categoria::all();
         $carrito = session()->get('carrito');
         
         if($carrito){
@@ -55,11 +56,11 @@ class CarritoController extends Controller{
     public function delete($id){
         
         $producto = Producto::find($id);
-        
+        $categorias = Categoria::all();
         $carrito = session()->get('carrito');
         unset($carrito[$producto->id]);
         session()->put('carrito', $carrito);
-        return view('carrito', compact('carrito', 'producto'));
+        return view('carrito', compact('carrito', 'producto', 'categorias'));
     }
 
 
@@ -71,7 +72,7 @@ class CarritoController extends Controller{
         // items text -> session()->get('carrito')
         //total
          ///estado 
-        //  flash('dGracias por comprar con nosotros')
+        //  flash('Gracias por comprar con nosotros')
         //  back()
     
     //}

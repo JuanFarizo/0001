@@ -1,4 +1,4 @@
-@extends("layouts.header")
+@extends("layouts.libreria")
 <br>
 <br>
 <br>
@@ -7,7 +7,9 @@
 <br>
 <br>
 <br>
-<br>
+
+
+@section('content')
 <h3>Carrito de compras</h3>
 <br>
 <div class="container">
@@ -62,3 +64,4 @@
   @endif
 
 </div>
+@endsection
