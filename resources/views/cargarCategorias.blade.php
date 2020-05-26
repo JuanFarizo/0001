@@ -12,11 +12,7 @@
 @endsection
 
 @section('content')
-<ul style="color:red" class="errores">
-    @foreach ($errors->all() as $error)
-        <li>{{$error}}</li>
-    @endforeach
-    </ul>
+
     
     <div class="container-fluid">
         <div class="panel shadow">
@@ -42,8 +38,15 @@
         </div>
 
           <div class="form-group col-md-6">
-          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-          <label class="custom-file-label" for="inputGroupFile01">Subir imagen</label>
+            <div class="input-group mb-3">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile02">
+                <label class="custom-file-label" for="inputGroupFile02">Subir imagen</label>
+              </div>
+              <div class="input-group-append">
+                <span class="input-group-text" id="">Upload</span>
+              </div>
+            </div>
         </div>
       
         <div class="form-group col-md-9">

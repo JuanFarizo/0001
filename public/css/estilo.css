@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.principal{
+body{
   background-color: whitesmoke;
   font-family:'Muli',sans-serif;
   margin: 0 auto;
@@ -259,6 +259,7 @@ h5{
 
 a {
   color:black;
+  text-decoration: none;
 }
 
 .categoria:hover {
@@ -272,6 +273,13 @@ a {
 position: relative;
 float:right;
 line-height: 40px;
+}
+
+.categorias:hover{
+  text-decoration: none;
+  color:black;
+  text-transform: uppercase;
+  font-family: 'Fredoka One', cursive;
 }
 
 
@@ -374,7 +382,7 @@ ul{
 .dashboard{
 padding: 0px;
  margin: 0px;
- font-size: 16px;
+ font-size: 15px;
 }
 
 .wrapper{

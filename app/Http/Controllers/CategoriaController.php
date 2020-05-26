@@ -12,9 +12,8 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $categorias = Categoria::paginate(10);
+    public function index(){
+        $categorias = Categoria::paginate(2);
         return view('listadoCategorias', compact('categorias'));
     }
 
@@ -23,9 +22,7 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        
+    public function create(){
         $categorias = Categoria::all();
         return view('cargarCategorias', compact('categorias'));
     }
@@ -62,6 +59,7 @@ class CategoriaController extends Controller
                 $categoria->descripcion = $request['descripcion'];
                 $categoria->nombre = $request['nombre'];
                 $categoria->esLibro = $request['esLibro'];
+                
                 $categoria->save();
 
                 return redirect('/admin/categoria')->with(compact('categoria'));

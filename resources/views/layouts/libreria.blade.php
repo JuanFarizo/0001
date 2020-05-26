@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/6ac70a7b0a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
     <link rel="shortcut icon" href="{{asset("img/librito-icono.ico")}}"/>
@@ -74,7 +75,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book-open"></i> Libros</a>
             <div class="dropdown-menu">
 
-              @foreach ($categorias as $item)
+              @foreach ($errors as $item)
               @if ($item->esLibro == 1)
               <a class="dropdown-item" href="{{route('libros', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
               @endif
@@ -86,7 +87,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-pencil-alt"></i> Papelería</a>
 
             <div class="dropdown-menu">
-              @foreach ($categorias as $item)
+              @foreach ($errors as $item)
               @if ($item->esLibro == 0)
               <a class="dropdown-item" href="{{route('papeleria', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
             @endif

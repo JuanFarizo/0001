@@ -29,6 +29,9 @@
       <li>
         <a class="enlace" href="/admin/contacto"><i class="fas fa-laptop"></i>  Consultas</a>
       </li>
+      <li>
+        <a class="enlace" href="/admin/pedidos"><i class="fas fa-truck"></i>  Pedidos</a>
+      </li>
       </ul>
       </div>
     </div>

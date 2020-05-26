@@ -5,50 +5,63 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
 @section('title', $categoria->nombre)
 @section('content')
 
-<div class="d-none d-md-block" style="">
-  <ul class="" style="margin-bottom: 100px; width:15%">
-  <li class="list-group-item" style="background-color: #f7fc9e;"><h5 style="color: black">Libros</h5></li>
-  @foreach ($categorias as $categoria)
+<div class="justify-content-start" style="padding-left: 10px">
+  
+  <div class="row justify-content-end">
+    {{-- aca pinto el fondo de rosa para que se vea la cantidad de margen que tiene y que hace que no se vea bien--}}
+  @foreach ($productosFiltrados as $producto)
+  <div class="col-4" style="background-color:rgb(241, 192, 230);">
+    <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$producto->imagen")}}" alt=""></a>
+      <h4 class="card-title" ><strong>{{$producto->nombre}}</strong></h4>
+      <p class="card-text"><small class="text-muted">${{$producto->precio}}</small></p>
+  </div>
+  @endforeach
+  </div>
+
+ <div class="d-none d-md-block" style="">
+  <div style="width: 18rem; background-color:rgb(248, 0, 103)">
+   <div class="card-header">
+    <h5 style="font-family: 'Fredoka One', cursive; text-transform: uppercase; color: whitesmoke">Libros</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    @foreach ($categorias as $categoria)
     @if ($categoria->esLibro == 1)
     <li class="list-group-item">
-      <a href="{{route('libros', ['categoria' => $categoria->id])}}" class="enlace-1">
+      <a class="categorias" href="{{route('libros', ['categoria' => $categoria->id])}}" class="enlace-1">
         {{$categoria->nombre}}</a>
+      </li>
+    
     @endif
     @endforeach
-  </li>
-</li>
+    </ul>
+  </div>
+ </div>
 
-  <li class="list-group-item" style= "background-color:#f7fc9e; margin-top:25px;"><h5 style="color: black">Papelería</h5></li>
+
+<div class="" style="padding-left: 10px">
+  <div class="d-none d-md-block" style="">
+<div class="" style="width: 18rem; background-color:rgb(248, 0, 116); margin-top:20px;">
+  <div class="card-header">
+    <h5 style="font-family: 'Fredoka One', cursive; text-transform: uppercase; color: whitesmoke">Categorías</h5>
+  </div>
+  <ul class="list-group list-group-flush">
     @foreach ($categorias as $categoria)
     @if ($categoria->esLibro == 0)
     <li class="list-group-item">
-    <a href="{{route('papeleria', ['categoria' => $categoria->id])}}" class="enlace-1">{{$categoria->nombre}}</a>
+    <a class="categorias" href="{{route('papeleria', ['categoria' => $categoria->id])}}" class="enlace-1">{{$categoria->nombre}}</a>
+  </li>
     @endif
     @endforeach
-  </li>
-   </ul>
+  </ul>
+ </div>
   </div>
-
-  <div class="row justify-content-around" style="position: relative; bottom: 500px; margin-left: 200px">
-    @foreach ($productosFiltrados as $producto)
-    <div class="" style="width:25%;">
-    <div class="card" style="">
-      <a href="/producto/{{$producto->id}}"><img class="image" src="{{asset("storage/$producto->imagen")}}" alt=""></a>
-      
-      <div class="card-body">
-        <h4 class="card-title" ><strong>{{$producto->nombre}}</strong></h4>
-        <p class="card-text"><small class="text-muted">${{$producto->precio}}</small></p>
-      </div>
-    </div>
-    </div>
-    @endforeach
 </div>
 
+
+
+  </div>
+  
 @endsection

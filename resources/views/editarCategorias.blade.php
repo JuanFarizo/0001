@@ -26,7 +26,6 @@
 
 <form action="{{url('/admin/categoria')}}" method="post" enctype="multipart/form-data">
     {{csrf_field()}}
-    @method('PUT')
 
     <div class="form-row" style="padding:25px 25px;">
     <div class="col-md-6 mb-3">
@@ -39,10 +38,17 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5">{{$categoria->descripcion}}</textarea>
   </div>
 
-    <div class="form-group col-md-6">
-    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-    <label class="custom-file-label" for="inputGroupFile01">Subir imagen</label>
-  </div>
+  <div class="form-group col-md-6">
+    <div class="input-group mb-3">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="inputGroupFile02">
+        <label class="custom-file-label" for="inputGroupFile02">Subir imagen</label>
+      </div>
+      <div class="input-group-append">
+        <span class="input-group-text" id="">Upload</span>
+      </div>
+    </div>
+</div>
   
   <div class="form-group col-md-9">
     <strong><label for="imagen">Seleccione el tipo  de categoria:  </label></strong>

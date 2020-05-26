@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Producto;
 use App\Categoria;
+use App\Producto;
+use App\Pedido;
 
 class CarritoController extends Controller{
     
@@ -25,8 +26,8 @@ class CarritoController extends Controller{
         if($carrito){
             
             if(isset($carrito[$id])){
-                
                 $carrito[$id]['cantidad']+=1;
+
             } else {
                 
                 $carrito[$id] = [
@@ -36,7 +37,8 @@ class CarritoController extends Controller{
                     "imagen" => $producto->imagen  
                 ];
             }
-        } else {
+
+         }  else {
             
             $carrito = [
                 $id => [
@@ -45,7 +47,7 @@ class CarritoController extends Controller{
                     "precio" => $producto->precio,
                     "imagen" => $producto->imagen,
                     ]
-            ];  
+                 ];  
         }
 
         session()->put('carrito', $carrito);
@@ -64,16 +66,20 @@ class CarritoController extends Controller{
     }
 
 
-    //public function checkout(){
-        // bsjar los productos de la session
+        public function checkout(){
+            $pedido = session()->get('carrito');
+             
+             return back();
+        // bajar los productos de la session
         // crear el pedido con los items que compro el usuario
         // modelo pedido 
         //user_id  unsignedinteger
         // items text -> session()->get('carrito')
         //total
          ///estado 
-        //  flash('Gracias por comprar con nosotros')
-        //  back()
+        //pedido->session()->flash('Gracias por comprar con nosotros');
+        //request->session()->flash('status', 'Task was successful!');
+        return back();
     
-    //}
+    }
 }

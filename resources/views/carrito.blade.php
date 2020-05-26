@@ -56,8 +56,12 @@
         $total;
   @endphp
 <div class="alert alert-info text-center"><b>Total a pagar: </b>$ {{ $total}}</div>
-  <div class="container">
+
+
+  <div class="container" style="display: flex; justify-content:space-between">
     <a href="/productos" class= "btn btn-primary">Seguir comprando</a>
+
+    <a href="/carrito" class= "btn btn-primary">Finalizar compra</a>
   </div>
   @else
   <h3><span class="label label-warning">El carrito está vacío</span></h3>

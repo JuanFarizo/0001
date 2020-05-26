@@ -6,3 +6,4 @@
     <h3>Consulta enviada con exito!</h3>
     </div>
 </main>
+@endsection

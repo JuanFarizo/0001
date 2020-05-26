@@ -1,5 +1,15 @@
-@extends('layouts.app')
+@extends('layouts.libreria')
 
+@section('title', 'Login')
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
