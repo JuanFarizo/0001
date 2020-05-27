@@ -12,18 +12,7 @@
 <br>
 <br>
 <br>
-{{-- 
-  <nav aria-label="breadcrumb">
-      
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/inicio">Home</a>  <i class="fas fa-angle-right"></i>
-        @if ($categorias == 0)
 
-      <li class="breadcrumb-item"><a href="/">{{$producto->categorias->nombre}}</a></li>
-      
-      @endif
-    </ol>
-  </nav> --}}
 
 <div class="row justify-content-center">
     <div class="col-3">
