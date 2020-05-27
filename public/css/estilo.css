@@ -84,11 +84,11 @@ align-items: center;
 }
 
 /*IMG*/
-.card-img-top:hover{
+/* .card-img-top:hover{
   transform: scale(1.09, 1.09);
   -webkit-transition-timin-function: ease-out;
   transition-duration: 900ms;
-}
+} */
 
 
 .image {
@@ -169,7 +169,6 @@ transition-delay: 0s;
 
 
 main{
-  margin: 17px;
   justify-content: center;
 }
 
@@ -287,7 +286,6 @@ line-height: 40px;
 .container-login{
 margin-top: 130px;
 width:100%;
-min-height:100vh;
 display: -webkit-flex;
 display: flex;
 flex-wrap:wrap;

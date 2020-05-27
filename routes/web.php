@@ -12,19 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Una vez que te logueás te retorna a la vista de inicio
- Route::get('/login,', function(){
-    return view('libreria');
- });
 
- //Una vez que te logueás te retorna a la vista de inicio
-Route::get('/logout', function() {
+ 
+Route::get('/login', function(){
     return view('inicio');
-});
+ });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+
+ //Una vez que te deslogueás te retorna a la vista de inicio
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 
 //Dashboard
 Route::get('/admin', function () {
@@ -58,12 +63,12 @@ Route::put('admin/contacto/{id}', 'ContactoController@update');
 Route::get('/producto/{id}',  'PrincipalController@show');
 
 //Carrito de compras
-Route::get('carrito', 'carritoController@carrito')->middleware('auth');
+Route::get('carrito', 'carritoController@carrito');
 Route::get('carrito/{id}', 'carritoController@add');
 Route::get('carrito/delete/{id}',['as' => 'carrito-delete', 'uses' => 'carritoController@delete']);
 
 //Pedido
-Route::get('admin/pedidos', 'PedidoController@crearPedido');
+Route::get('admin/pedidos', 'PedidoController@index');
 Route::put('admin/pedidos', 'PedidoController@store');
 //Route::put('admin/pedido/{id}', 'PedidoController@update');
 

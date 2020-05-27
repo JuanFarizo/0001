@@ -49,9 +49,7 @@
         </form>
         <a class="dropdown-item" href="{{ route('logout') }}"
         onclick="event.preventDefault();
-                      document.getElementById('logout-form').submit();">
-          Salir
-     </a>
+             document.getElementById('logout-form').submit();"> Salir </a>
         @endif
       </div>
     </div>
@@ -75,7 +73,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book-open"></i> Libros</a>
             <div class="dropdown-menu">
 
-              @foreach ($categorias as $item)
+              @foreach ($errors as $item)
               @if ($item->esLibro == 1)
               <a class="dropdown-item" href="{{route('libros', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
               @endif
@@ -87,7 +85,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-pencil-alt"></i> Papelería</a>
 
             <div class="dropdown-menu">
-              @foreach ($categorias as $item)
+              @foreach ($errors as $item)
               @if ($item->esLibro == 0)
               <a class="dropdown-item" href="{{route('papeleria', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
             @endif
@@ -116,11 +114,6 @@
           <a class="nav-link" href="{{ route('login') }}">Login</a>
           </li>
          @endif
-
-          <li class="nav-item">
-            <a class="nav-link" href="<?php if(isset($_SESSION['usuario'])) {echo "perfil-usuario.php";} else {echo "";}?>"><?php if(isset($_SESSION['usuario'])) {echo "Perfil Usuario";}?></a>
-          </li>
-
         </ul>
 
 <!------------BUSCADOR DE LA NAVEGACION--------------------------------->

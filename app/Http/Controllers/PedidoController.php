@@ -9,20 +9,32 @@ use App\Producto;
 use App\Carrito;
 
 class PedidoController extends Controller{
+
+    //crear pedido
+
     public function crearPedido(){
-        $pedido = session()->get('carrito');
+        $productos = Producto::all();
+
         
-        return view('listadoPedidos', compact('pedido'));
+
+        $pedido = session()->get('carrito');
+
+        
+        return back();
     }
 
     public function index(){
-        $pedido = session()->get('carrito');
-        $pedido = Pedido::paginate(4);
+
         $productos = Producto::all();
-        return view('listadoPedidos', compact('pedido', 'productos'));
+
+        $pedido = session()->get('carrito');
+
+        
+        
+        return view('listadoPedidos', compact('pedido'));
     }
     
-    public function store($id) {
+    public function store(Request $request) {
         $productos = Producto::all();
         $categorias = Categoria::all();
         $pedido = session()->get('carrito');

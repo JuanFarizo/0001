@@ -67,8 +67,9 @@ class CarritoController extends Controller{
 
 
         public function checkout(){
-            $pedido = session()->get('carrito');
-             
+            
+            $pedido = $carrito[$id];
+            
              return back();
         // bajar los productos de la session
         // crear el pedido con los items que compro el usuario
@@ -78,7 +79,7 @@ class CarritoController extends Controller{
         //total
          ///estado 
         //pedido->session()->flash('Gracias por comprar con nosotros');
-        //request->session()->flash('status', 'Task was successful!');
+        
         return back();
     
     }
