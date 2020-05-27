@@ -35,8 +35,7 @@ class PrincipalController extends Controller
      public function show($id) {
         $producto = Producto::find($id);
         $categorias =  Categoria::all();
-        $productosFiltrados = Categoria::find($id)->productos;
-         return view('detalleProducto', compact('producto', 'categorias','productosFiltrados'));
+         return view('detalleProducto', compact('producto', 'categorias'));
     }
 
 }

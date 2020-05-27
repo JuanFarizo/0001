@@ -38,7 +38,7 @@
     @endforeach
     </ul>
   </div>
- </div>
+ 
 
 
 <div class="" style="padding-left: 10px">
@@ -59,9 +59,9 @@
  </div>
   </div>
 </div>
+</div>
 
-
-
-  </div>
+</div>
+  
   
 @endsection
