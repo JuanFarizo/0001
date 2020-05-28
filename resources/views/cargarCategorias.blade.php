@@ -23,8 +23,7 @@
       
       <form action="/admin/categoria" method="post" enctype="multipart/form-data">
           {{csrf_field()}}
-        
-      
+     
           <div class="form-row" style="padding:25px 25px;">
           <div class="col-md-6 mb-3">
             <strong><label for="inputName">Nombre</label></strong>
@@ -71,8 +70,6 @@
       
       </div>
       </div>  
-
-
 
 
 @endsection

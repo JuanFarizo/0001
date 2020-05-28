@@ -46,8 +46,11 @@
           <br>
 
 <section>
+  <div class="container">
   <h2>Libros</h2>
- 
+
+  <div class="row">
+
         <div class="card-deck">
           
           @foreach ($categorias as $item)
@@ -66,13 +69,14 @@
         </div>
         @endif
         @endforeach   
-        </div>         
+        </div>
+      </div>       
       </section>
-
-
+    
+   <div class="row">
       <section>
         <h2>Papeleria</h2>
-       
+      
               <div class="card-deck">
                 
                 @foreach ($categorias as $item)
@@ -91,6 +95,17 @@
               @endforeach  
               </div>         
             </section>
-    </main>
     
+        </div>
+        </div>
+    </main>
+<br>
+
+
+
+
+
+
+
+
  @endsection

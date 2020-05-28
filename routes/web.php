@@ -25,8 +25,6 @@ Auth::routes();
 
 
 
-
-
  //Una vez que te deslogueás te retorna a la vista de inicio
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
@@ -68,9 +66,10 @@ Route::get('carrito/{id}', 'carritoController@add');
 Route::get('carrito/delete/{id}',['as' => 'carrito-delete', 'uses' => 'carritoController@delete']);
 
 //Pedido
-Route::get('admin/pedidos', 'PedidoController@index');
+Route::get('admin/pedido', 'PedidoController@index');
+Route::get('admin/pedidos', 'PedidoController@create');
 Route::put('admin/pedidos', 'PedidoController@store');
-//Route::put('admin/pedido/{id}', 'PedidoController@update');
+Route::put('admin/pedido/{id}', 'PedidoController@update');
 
 
 //Perfil usuario
@@ -80,3 +79,12 @@ Route::get('/perfil-usuario/{id}', 'UserController@show');
 Route::get('/perfil-usuario/{id}/edit', 'UserController@edit');
 
 Route::put('/perfil-usuario/{id}', 'UserController@update');
+
+//F.A.Q
+Route::get('/faq', 'FaqController@index');
+
+Route::get('/admin/faq/create', 'FaqController@create');
+
+Route::post('/faq', 'FaqController@store');
+
+// Route::get('/faq/listado/{id}', 'FaqController@show');

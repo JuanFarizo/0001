@@ -2,14 +2,15 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 @section('title', 'Contacto')
 @section('content')
 
-    <ul style="color:red" class="errores">
-        @foreach ($errors->all() as $error)
-            <li>{{$error}}</li>
-        @endforeach
-    </ul>
+  
     <main style="">
       <div class="contenedor-contacto">
         <div class="contenedor-form">
