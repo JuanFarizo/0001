@@ -1,16 +1,10 @@
 @extends("layouts.libreria")
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 @section('title', 'Carrito')
 
 @section('content')
-<h3>Carrito de compras</h3>
+<main style="margin-top:235px">
+<h3 style="text-align: center">Carrito de compras</h3>
 <br>
 <div class="container">
   @if(session('carrito'))
@@ -61,11 +55,12 @@
   <div class="container" style="display: flex; justify-content:space-between">
     <a href="/productos" class= "btn btn-primary">Seguir comprando</a>
 
-    <a href="" class= "btn btn-primary">Finalizar compra</a>
+    <a href=""><button class="btn btn" style="background-color:#ff89c0; color:rgb(255, 255, 243)" type="submit">Guardar</button></a>
   </div>
   @else
   <h3><span class="label label-warning">El carrito está vacío</span></h3>
   @endif
 
 </div>
+</main>
 @endsection

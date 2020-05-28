@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="{{asset("img/librito-icono.ico")}}"/>
     <title>Dashboard @yield('title') - Libreria Lablic</title>
   </head>
-  <body class="dashboard">
+  <body>
     <div class="wrapper">
       <div class="col1">@include('layouts.sidebar')</div>
       <div class="col2">

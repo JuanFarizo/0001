@@ -13,7 +13,7 @@ class CategoriaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $categorias = Categoria::paginate(2);
+        $categorias = Categoria::all();
         return view('listadoCategorias', compact('categorias'));
     }
 
@@ -62,7 +62,7 @@ class CategoriaController extends Controller
                 
                 $categoria->save();
 
-                return redirect('/admin/categoria')->with(compact('categoria'));
+                return redirect('/admin/categoria/create')->with(compact('categoria'));
     }
 
     /**

@@ -15,4 +15,10 @@ class Pedido extends Model
    public function usuario() {
     return $this->belongsTo("App\User", "user_id");
     }
+
+    
+    protected $casts = [
+        'items' => 'collection',
+    ];
+    
 }

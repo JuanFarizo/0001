@@ -55,7 +55,5 @@
 </div>
  </div>
 </div>
-<div class="container-fluid" style="margin-top: 10px">
-    {{$categorias->links()}}
-    </div>
+
 @endsection

@@ -79,8 +79,6 @@ class CarritoController extends Controller{
         //total
          ///estado 
         //pedido->session()->flash('Gracias por comprar con nosotros');
-        
-        return back();
     
     }
 }
