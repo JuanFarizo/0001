@@ -44,4 +44,8 @@ class User extends Authenticatable
         else
             return false;
     }
+
+    public function pedidos() {
+        return $this->hasMany("App\Pedido", "pedido_id");
+  }
 }

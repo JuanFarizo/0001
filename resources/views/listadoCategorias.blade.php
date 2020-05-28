@@ -18,6 +18,9 @@
     <h2 class="title"><i class="fas fa-stream"></i> Categorías</h2>   
   </div>
 <div class="inside">
+    @if (session('success_message'))
+    <div class= 'alert alert-success'> {{session('success_message')}}</div>
+      @endif
 <table class="table">
 <thead>
     <tr>
@@ -55,5 +58,5 @@
 </div>
  </div>
 </div>
-
+@include('sweetalert::alert')
 @endsection

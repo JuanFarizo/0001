@@ -20,6 +20,9 @@
     </div>
   <div class="inside">
   <table class="table">
+	@if (session('success_message'))
+    <div class= 'alert alert-success'> {{session('success_message')}}</div>
+      @endif
     <thead>
       <tr>
         <td><strong>ID</strong></td>
@@ -75,4 +78,6 @@
 <div class="container-fluid" style="margin-top: 10px">
 {{$productos->links()}}
 </div>
+
+@include('sweetalert::alert')
 @endsection

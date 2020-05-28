@@ -64,8 +64,7 @@ class ContactoController extends Controller
         $contacto->cuerpo = $request['cuerpo'];
         $contacto->respondida = 0;
         $contacto->save();
-        
-        return view('formularioEnviado')->with(compact('categorias'));
+        return redirect('/inicio')->with('success', 'Consulta Enviada');
     }
 
     /**
@@ -100,11 +99,10 @@ class ContactoController extends Controller
     public function update(Request $request, $id)
     {
         $contactos = Contacto::all();
-        $categorias = Categoria::all();
         $contacto = Contacto::find($id);
         $contacto->respondida = 1;
         $contacto->save();
-        return redirect('admin/contacto')->with(compact('contactos', 'categorias'));
+        return redirect('admin/contacto')->with(compact('contactos'));
     }
 
     /**

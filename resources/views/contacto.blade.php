@@ -10,11 +10,11 @@
 @section('title', 'Contacto')
 @section('content')
 
-  
+
     <main style="">
       <div class="contenedor-contacto">
         <div class="contenedor-form">
-
+          
     <form class="formulario" action="/contacto" method="post">
         {{csrf_field()}}
         <div class="form-group">
@@ -48,6 +48,8 @@
     
    </div>
   </div>
+
+
 </main>
 
 @endsection

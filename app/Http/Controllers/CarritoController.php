@@ -13,8 +13,8 @@ class CarritoController extends Controller{
     
     //Mostrar carrito
     public function carrito(){
-        $categorias = Categoria::all();
-        return view('carrito', compact('categorias'));
+        
+        return view('carrito');
     }
     
     //Agregar producto al carrito

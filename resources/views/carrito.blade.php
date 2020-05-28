@@ -55,7 +55,11 @@
   <div class="container" style="display: flex; justify-content:space-between">
     <a href="/productos" class= "btn btn-primary">Seguir comprando</a>
 
-    <a href=""><button class="btn btn" style="background-color:#ff89c0; color:rgb(255, 255, 243)" type="submit">Guardar</button></a>
+    <form  action="/admin/pedidos" method="POST" >
+      {{csrf_field()}}
+      @method('PUT')
+    <button class="btn btn" style="background-color:#ff89c0; color:rgb(255, 255, 243)" type="submit">Guardar</button>
+  </form>  
   </div>
   @else
   <h3><span class="label label-warning">El carrito está vacío</span></h3>

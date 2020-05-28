@@ -72,12 +72,13 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book-open"></i> Libros</a>
             <div class="dropdown-menu">
-
-              @foreach ($errors as $item)
+              @if (isset($categorias))              
+              @foreach ($categorias as $item)
               @if ($item->esLibro == 1)
               <a class="dropdown-item" href="{{route('libros', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
               @endif
               @endforeach
+              @endif
               <div class="dropdown-divider"></div>
             </div>
             
@@ -85,11 +86,13 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-pencil-alt"></i> Papelería</a>
 
             <div class="dropdown-menu">
-              @foreach ($errors as $item)
+              @if (isset($categorias))
+              @foreach ($categorias as $item)
               @if ($item->esLibro == 0)
               <a class="dropdown-item" href="{{route('papeleria', ['categoria' => $item->id])}}">{{$item->nombre}}</a>
             @endif
               @endforeach
+              @endif
               <div class="dropdown-divider"></div>
             </div>
 
