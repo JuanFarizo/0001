@@ -28,13 +28,20 @@ class UserController extends Controller {
 
   
     public function update(Request $request, $id) {
-      $usuario = User::find($request["id"]);
+      $usuario = User::find($id);
       $usuario->name = $request["name"];
       $usuario->lastname = $request["lastname"];
-      
+      $usuario->email = $request["email"];
 
+      if(isset($request['avatar'])){
+      $extension = $request->file('avatar')->getClientOriginalExtension();
+      $ruta = $request->file('avatar')->storeAs('public/avatars',"_" . uniqid() . "." . $extension);
+        $nombreDelArchivo = basename($ruta);
+      $usuario->avatar = $nombreDelArchivo;
+    }
+    
       $usuario->save();
-     return redirect('/perfil-usuario/id')->with(compact("usuario"));
+     return redirect('/perfil-usuario/{id}')->with(compact("usuario"));
   }
 
 
