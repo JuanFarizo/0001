@@ -58,7 +58,7 @@
     <form  action="/admin/pedidos" method="POST" >
       {{csrf_field()}}
       @method('PUT')
-    <button class="btn btn" style="background-color:#ff89c0; color:rgb(255, 255, 243)" type="submit">Guardar</button>
+    <button class="btn btn" style="background-color:#ff89c0; color:rgb(255, 255, 243)" type="submit">Finalizar compra</button>
   </form>  
   </div>
   @else

@@ -120,8 +120,9 @@
         </ul>
 
 <!------------BUSCADOR DE LA NAVEGACION--------------------------------->
+
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Ingresa palabra clave">
+          <input class="form-control mr-sm-2" name="search" type="search" placeholder="Ingresa palabra clave">
           <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
             <i class="fas fa-search"></i>
           </button>

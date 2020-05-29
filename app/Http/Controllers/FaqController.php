@@ -14,7 +14,7 @@ class FaqController extends Controller
      */
     public function index(){
         $preguntas = FAQ::all();
-        return view('faq', compact('preguntas'));
+        return view('listadoFaq', compact('preguntas'));
     }
 
 

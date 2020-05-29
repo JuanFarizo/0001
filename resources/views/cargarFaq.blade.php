@@ -1,14 +1,20 @@
 @extends("layouts.master")
 
 
-@section('title', 'F.A.Q')
+@section('title', 'Preguntas frecuentes')
+
+@section('breadcrumb')
+<li class="breadcrumb-item">
+  <a class="bread" href="{{ url('/admin/faq/listado') }}"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</a>
+</li>
+@endsection
 
 @section('content')
 
 <div class="container-fluid">
         <div class="panel shadow">
          <div class="header">
-          <h2 class="title"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</h2>   
+          <h2 class="title"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</h2>
         </div>
 
       <form action="/faq/" method="post">

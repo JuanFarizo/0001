@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-  <a class="bread" href="{{ url('/admin/usuarios') }}"><i class="fas fa-users"></i>  Usuarios</a>
+  <a class="bread" href="{{ url('/admin/preguntas') }}"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</a>
 </li>
 @endsection
 
@@ -12,7 +12,7 @@
 <div class="container-fluid">
     <div class="panel shadow">
      <div class="header">
-      <h2 class="title"><i class="fas fa-users"></i>  Usuarios</h2>   
+      <h2 class="title"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</h2>   
     </div>
   <div class="inside">
   <table class="table">
@@ -20,25 +20,17 @@
       <tr>
         <td><strong>ID</strong></td>
         <td><strong>Nombre</strong></td>
-        <td><strong>Apellido</strong></td>
-        <td><strong>Email</strong></td>
-        <td><strong>Rol</strong></td>
+        <td><strong>Descripción</strong></td>
       </tr>
     </thead>
     <tbody>
-      @foreach($usuarios as $usuario)
+      @foreach($preguntas as $pregunta)
       <tr>
-        <td>{{$usuario->id}}</td>
-        <td>{{$usuario->name}}</td>
-        <td>{{$usuario->lastname}}</td>
-        <td>{{$usuario->email}}</td>
+        <td>{{$pregunta->id}}</td>
+        <td>{{$pregunta->nombre}}</td>
+        <td>{{$pregunta->descripcion}}</td>
         <td>
-          @if($usuario->isAdmin)
-           {{$usuario->isAdmin}} (administrador)
-           @else
-           usuario normal
-         @endif
-        
+         
         </td>
       </tr>
       @endforeach
@@ -47,7 +39,5 @@
   </div>
   </div>
 </div>
-<div class="container-fluid" style="margin-top: 10px">
-{{$usuarios->links()}}
-</div>
+
 @endsection

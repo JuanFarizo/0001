@@ -85,6 +85,6 @@ Route::get('/faq', 'FaqController@index');
 
 Route::get('/admin/faq/create', 'FaqController@create');
 
-Route::post('/faq', 'FaqController@store');
+Route::put('/admin/faq/listado', 'FaqController@store');
 
 Route::get('/faq/{id}', 'FaqController@show');
