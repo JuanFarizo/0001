@@ -16,7 +16,7 @@ class CreatePedidosTable extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
             $table->text('items');
-            $table->string('estado')->default('pendiente');
+            $table->boolean('estado')->default(false);
             $table->integer('total');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();

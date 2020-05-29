@@ -147,6 +147,6 @@ class CategoriaController extends Controller
         }
         $categoria = Categoria::find($categorium);
         $categoria->delete();
-        return redirect('/admin/categoria');  
+        return redirect('/admin/categoria')->with('success', 'Categoria Eliminada'); 
     }
 }

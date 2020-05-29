@@ -2,6 +2,11 @@
 @section('title', 'Home')
 @section('content')
     <main style="margin-top:200px" >
+      @if (session('success_message'))
+          <div class="alert alert-success"> 
+            {{session('success_message')}}
+          </div>
+            @endif
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -107,5 +112,5 @@
 
 
 
-
+@include('sweetalert::alert')
  @endsection

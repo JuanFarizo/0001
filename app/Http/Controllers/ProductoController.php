@@ -151,6 +151,6 @@ class ProductoController extends Controller
     {
         $producto = Producto::find($categorium);
         $producto->delete();
-        return redirect('/admin/producto'); 
+        return redirect('/admin/producto')->with('success', 'Producto Eliminado'); 
     }
 }
