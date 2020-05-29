@@ -50,7 +50,7 @@
           </div>
           <br>
 
-<section>
+
   <div class="container">
   <h2>Libros</h2>
 
@@ -76,10 +76,10 @@
         @endforeach   
         </div>
       </div>       
-      </section>
+
     
    <div class="row">
-      <section>
+  
         <h2>Papeleria</h2>
       
               <div class="card-deck">
@@ -99,15 +99,12 @@
               @endif
               @endforeach  
               </div>         
-            </section>
+        
     
         </div>
-        </div>
-    </main>
+    </div>
 <br>
-
-
-
+    </main>
 
 
 
