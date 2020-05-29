@@ -5,7 +5,7 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-  <a class="bread" href="{{ url('/admin/faq/listado') }}"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</a>
+  <a class="bread" href="{{ url('admin/faq') }}"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</a>
 </li>
 @endsection
 
@@ -14,7 +14,7 @@
 <div class="container-fluid">
         <div class="panel shadow">
          <div class="header">
-          <h2 class="title"><i class="fas fa-question-circle"></i>  Cargar Preguntas frecuentes</h2>
+          <h2 class="title"><i class="fas fa-plus"></i>  Cargar Preguntas frecuentes</h2>
         </div>
 
       <form action="/admin/faq" method="post">

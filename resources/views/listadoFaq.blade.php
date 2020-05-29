@@ -4,7 +4,7 @@
 
 @section('breadcrumb')
 <li class="breadcrumb-item">
-  <a class="bread" href="{{ url('/admin/preguntas') }}"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</a>
+  <a class="bread" href="{{ url('/admin/faq') }}"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</a>
   <li class="breadcrumb-item">
     <a class="bread" href="/admin/faq/create"><i class="fas fa-plus"></i>  Agregar Pregunta Frecuente</a>
     </li>

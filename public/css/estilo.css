@@ -82,12 +82,11 @@ transition:opacity .5s;
 align-items: center;
 }
 
-/*IMG*/
-/* .card-img-top:hover{
+ .card-img-top:hover{
   transform: scale(1.09, 1.09);
   -webkit-transition-timin-function: ease-out;
   transition-duration: 900ms;
-} */
+} 
 
 
 .image {
@@ -516,5 +515,14 @@ ul{
   }
 
 
+/*F.A.Q*/
 
+	
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
  
+
+

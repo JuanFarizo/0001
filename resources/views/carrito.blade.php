@@ -3,8 +3,25 @@
 @section('title', 'Carrito')
 
 @section('content')
-<main style="margin-top:235px">
-<h3 style="text-align: center">Carrito de compras</h3>
+
+  <div align="center"; style="margin-top:225px">
+ 
+  
+  
+      <div class="container">
+                @if (isset($preguntas))
+                    
+              
+        @foreach ($preguntas as $pregunta)
+  
+          <h2 class="preguntas" style="text-shadow:none; letter-spacing:0px;"><strong>{{$pregunta->nombre}}</strong></h2>
+            <p style="text-align: left">{{$pregunta->descripcion}}</p>
+      
+  
+        @endforeach
+        @endif
+        </div>
+      </section>
 <br>
 <div class="container">
   @if(session('carrito'))
@@ -66,5 +83,19 @@
   @endif
 
 </div>
-</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 @endsection
