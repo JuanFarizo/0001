@@ -40,7 +40,6 @@ Route::prefix('admin')->group(function () {
 Route::resource('producto', 'ProductoController')->middleware(['auth', 'isAdmin']);
 Route::resource('categoria', 'CategoriaController')->middleware(['auth', 'isAdmin']);
 Route::get('contacto', 'ContactoController@index')->middleware('auth', 'isAdmin');
-Route::get('usuarios', 'UserController@index')->middleware('auth', 'isAdmin');
 });
 
 //Página principal
@@ -88,4 +87,4 @@ Route::get('/admin/faq/create', 'FaqController@create');
 
 Route::post('/faq', 'FaqController@store');
 
-// Route::get('/faq/listado/{id}', 'FaqController@show');
+Route::get('/faq/{id}', 'FaqController@show');

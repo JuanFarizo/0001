@@ -1,21 +1,20 @@
 @extends("layouts.libreria")
 
-
-@section('title', 'F.A.Q')
+@section('title', 'Preguntas Frecuentes')
 
 @section('content')
-<section style="margin-top:235px">
+<div style="margin-top:235px">
     <h2 class = "titulo" style="text-align:center">Preguntas Frecuentes</h2>
 
-    <div class="row justify-content-around">
+    <div class="container">
               
       @foreach ($preguntas as $pregunta)
 
-        <h4 class="card-title">{{$pregunta->nombre}}</h4>
-          <p class="card-text">{{$pregunta->descripcion}}</p>
+        <h4>{{$pregunta->nombre}}</h4>
+          <p>{{$pregunta->descripcion}}</p>
         </div>
 
       @endforeach
     
-    </section>
+      </div>
 @endsection
