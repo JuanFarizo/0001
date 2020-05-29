@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -88,3 +89,5 @@ Route::get('/admin/faq/create', 'FaqController@create')->middleware('auth', 'isA
 Route::put('/admin/faq', 'FaqController@store')->middleware('auth', 'isAdmin');
 
 Route::get('admin/faq', 'FaqController@muestraDash');
+
+Route::get('admin/usuarios', 'UserController@index')->middleware('auth', 'isAdmin');
