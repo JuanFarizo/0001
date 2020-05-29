@@ -14,7 +14,12 @@ class FaqController extends Controller
      */
     public function index(){
         $preguntas = FAQ::all();
-        return view('listadoFaq', compact('preguntas'));
+        return view('faq', compact('preguntas'));
+    }
+
+    public function muestraDash() {
+        $preguntas = FAQ::all();
+        return view('listadoFaq', compact('preguntas'));    
     }
 
 
@@ -51,12 +56,13 @@ class FaqController extends Controller
         $this->validate($form, $reglas, $errors);
 
                 $pregunta = new FAQ();
+                $preguntas = FAQ::all();
                 $pregunta->nombre = $form['nombre'];
                 $pregunta->descripcion = $form['descripcion'];
                 
                 $pregunta->save();
-
-                return redirect('/faq/{id}')->with(compact('pregunta'));
+                $id = $pregunta->id;
+                return redirect('/faq')->with(compact('pregunta'));
 
     }
 

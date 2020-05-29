@@ -83,8 +83,8 @@ Route::put('/perfil-usuario/{id}', 'UserController@update');
 //F.A.Q
 Route::get('/faq', 'FaqController@index');
 
-Route::get('/admin/faq/create', 'FaqController@create');
+Route::get('/admin/faq/create', 'FaqController@create')->middleware('auth', 'isAdmin');
 
-Route::put('/admin/faq/listado', 'FaqController@store');
+Route::put('/admin/faq', 'FaqController@store')->middleware('auth', 'isAdmin');
 
-Route::get('/faq/{id}', 'FaqController@show');
+Route::get('admin/faq', 'FaqController@muestraDash');

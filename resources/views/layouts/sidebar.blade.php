@@ -33,7 +33,7 @@
         <a class="enlace" href="/admin/pedido"><i class="fas fa-truck"></i>  Pedidos</a>
       </li>
       <li>
-        <a class="enlace" href="/admin/faq/create"><i class="fas fa-question-circle"></i>  Preguntas frecuentes</a>
+        <a class="enlace" href="/admin/faq"><i class="fas fa-question-circle"></i>   Preguntas frecuentes</a>
       </li>
       </ul>
       </div>
