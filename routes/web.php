@@ -69,7 +69,7 @@ Route::get('carrito/delete/{id}',['as' => 'carrito-delete', 'uses' => 'carritoCo
 //Pedido
 Route::get('admin/pedido', 'PedidoController@index');
 Route::get('admin/pedidos', 'PedidoController@create');
-Route::put('admin/pedidos', 'PedidoController@store');
+Route::put('admin/pedidos', 'PedidoController@store')->middleware('auth');
 Route::put('admin/pedido/{id}', 'PedidoController@update');
 
 
