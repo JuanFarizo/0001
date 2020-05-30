@@ -1,8 +1,9 @@
 @extends("layouts.libreria")
 @section('title', 'Mi perfil')
+
 @section('content')
 
-<div class="container-login">
+<div class="container-login" style="margin-top:225px">
 <div class="card bg-light" style="width:50%">
   <div class="card-header" style="background-color: #fde3a3; width:100%;">
     <h2 class="title"><i class="fas fa-user"></i>Información</h2>
@@ -26,5 +27,6 @@
   </div>
 </div>
 </div>
+<br>
 
 @endsection

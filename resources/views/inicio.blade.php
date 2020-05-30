@@ -77,8 +77,6 @@
         </div>
       </div>       
 
-    
-   <div class="row">
   
         <h2>Papeleria</h2>
       
@@ -101,13 +99,10 @@
               </div>         
         
     
-        </div>
+
     </div>
-<br>
+    <br>
     </main>
-
-
-
 
 @include('sweetalert::alert')
  @endsection

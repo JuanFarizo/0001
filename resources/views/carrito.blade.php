@@ -80,6 +80,7 @@
   </div>
   @else
   <h3><span class="label label-warning">El carrito está vacío</span></h3>
+  <h4><span class="label label-warning">Comprar <a href="/productos">acá</a></span></h4>
   @endif
 
 </div>
@@ -94,8 +95,5 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
+
 @endsection

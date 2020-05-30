@@ -290,8 +290,7 @@ display: flex;
 flex-wrap:wrap;
 justify-content: center;
 align-items: center;
-background: -webkit-linear-gradient(to right, #fde3a3, #fb9abc);
-background: linear-gradient(to right, #fde3a3, #fb9abc);
+
 }
 
 .panel{
@@ -307,9 +306,6 @@ background: linear-gradient(to right, #fde3a3, #fb9abc);
   margin: 15 auto;
 }
 
-.form-group{
-  padding: 25px 25px;
-}
 
 /*CONTACTO*/
 
@@ -332,43 +328,6 @@ right: -250px;
 span{
   
   width:100%;
-}
-
-/*FOOTER*/
-footer{
-  border-top: 2px solid pink;
-  background-color: rgba(255, 99, 71, 0.5);
-  flex: 0 0 auto;
-  margin:0 auto;
-}
-
-
-h6{
-  text-align: center;
-}
-.sociales{
-  text-align: center;
-}
-.sociales button{
-  background-color: pink;
-  border-radius: 50%;
-  border-color: gold;
-
-}
-h4{
-  font-size: 15px;
-  text-align: center;
-}
-.ubicacion p{
-  font-size: 12px;
-  text-align: center;
-  margin: 2px;
-}
-
-.fa-shopping-cart:hover{
-  transition: 0.3s;
-  transform: scale(1.2);
-  color:rgb(255, 4, 129);
 }
 
 
@@ -526,4 +485,40 @@ ul{
 }
  
 
+/*FOOTER*/
+footer{
+  border-top: 2px solid pink;
+  background-color: rgba(255, 99, 71, 0.5);
+  flex: 0 0 auto;
+  margin:0 auto;
+}
+
+
+h6{
+  text-align: center;
+}
+.sociales{
+  text-align: center;
+}
+.sociales button{
+  background-color: pink;
+  border-radius: 50%;
+  border-color: gold;
+
+}
+h4{
+  font-size: 15px;
+  text-align: center;
+}
+.ubicacion p{
+  font-size: 12px;
+  text-align: center;
+  margin: 2px;
+}
+
+.fa-shopping-cart:hover{
+  transition: 0.3s;
+  transform: scale(1.2);
+  color:rgb(255, 4, 129);
+}
 

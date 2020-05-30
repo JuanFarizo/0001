@@ -13,7 +13,7 @@
         @foreach ($categoriaLibros as $categoria)           
           @foreach ($categoria->productos as $item)
       
-        <div class="col-sm-9 col-md-6 col-lg-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card" style="padding-top:20px; margin-top:20px; margin-bottom:20px; width: 281px">
           <a class="" href="/producto/{{$item->id}}">
           <?php $imagen = $item->imagen ?>
@@ -30,8 +30,6 @@
       
       </section>
     </div>
-
-
 
 <section>
   <h2 class = "titulo" style="text-align:center">Papelería</h2>
